@@ -223,4 +223,4 @@ Grouping elements have only two properties (width and height), they should be se
 
 ## Variables
 
-See the [HUD variable reference](./settings/hud/#mqwcl-hud) for all HUD settings.
+See the [HUD variable reference](./settings/hud#mqwcl-hud) for all HUD settings.

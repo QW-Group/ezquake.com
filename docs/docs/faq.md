@@ -5,11 +5,11 @@
 
 ## What do I need in order to play QW?
 
-See [getting started](/info/getting-started/).
+See [getting started](/info/getting-started).
 
 ## Where can I find servers?
 
-* In ezQuake - use the [Server Browser](./server-browser/)
+* In ezQuake - use the [Server Browser](./server-browser)
 * On the web - [QuakeWorld HUB](https://hub.quakeworld.nu/)
 
 ## Where can I get custom maps?

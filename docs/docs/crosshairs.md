@@ -106,4 +106,4 @@ O (or o)     dont draw a pixel
 
 ## Variables
 
-See the [crosshairs settings reference](./settings/graphics/#crosshair-settings) for all crosshair settings.
+See the [crosshairs settings reference](./settings/graphics#crosshair-settings) for all crosshair settings.

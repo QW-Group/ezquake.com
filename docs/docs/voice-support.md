@@ -94,4 +94,4 @@ These commands instruct the server to stop sending data, so cut down on data you
 * `/cl_voip_vad_threshhold`
 * `/s_raw_volume`
 
-See the [sound settings reference](./settings/sound/#voip) for all voice settings.
+See the [sound settings reference](./settings/sound#voip) for all voice settings.
