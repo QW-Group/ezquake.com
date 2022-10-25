@@ -3,6 +3,9 @@
 
 # Frequently Asked Questions (FAQ)
 
+## Can we use preview channels?
+Lets find out!
+
 ## What do I need in order to play QW?
 
 See [getting started](/info/getting-started).
