@@ -28,7 +28,7 @@ export default defineConfig({
     lastUpdated: true,
     outDir: '../dist',
     ignoreDeadLinks: true,
-    cleanUrls: 'without-subfolders',
+    cleanUrls: 'with-subfolders',
     markdown: {
       theme: {
         dark: 'github-dark',
