@@ -1,0 +1,17 @@
+{
+  "name": "ezquake.com",
+  "version": "0.1.0",
+  "description": "ezQuake website",
+  "repository": "git@github.com:QW-Group/ezquake.com.git",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "devDependencies": {
+    "firebase-tools": "^11.15.0",
+    "vitepress": "^1.0.0-alpha.22",
+    "vue": "^3.2.41"
+  }
+}
