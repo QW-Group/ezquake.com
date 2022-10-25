@@ -35,6 +35,11 @@ export default defineConfig({
         light: 'github-light',
       }
     },
+    vite: {
+      define: {
+        global: {}
+      }
+    },
     themeConfig: {
       logo: '/assets/img/ezquake_logo.png',
       nav: topNavItems,
