@@ -1,4 +1,4 @@
-https://raw.githubusercontent.com/vikpe/ezquake-source/master/help_cmdline_params.json
-https://raw.githubusercontent.com/vikpe/ezquake-source/master/help_commands.json
-https://raw.githubusercontent.com/vikpe/ezquake-source/master/help_macros.json
-https://raw.githubusercontent.com/vikpe/ezquake-source/master/help_variables.json
+https://raw.githubusercontent.com/QW-Group/ezquake-source/master/help_cmdline_params.json
+https://raw.githubusercontent.com/QW-Group/ezquake-source/master/help_commands.json
+https://raw.githubusercontent.com/QW-Group/ezquake-source/master/help_macros.json
+https://raw.githubusercontent.com/QW-Group/ezquake-source/master/help_variables.json
