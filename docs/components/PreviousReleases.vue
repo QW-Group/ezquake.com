@@ -15,7 +15,7 @@ export default {
 
 <template>
 
-  <table>
+  <table style="font-size: 0.85em">
     <thead>
       <tr>
         <th>Version</th>
