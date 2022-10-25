@@ -15,7 +15,7 @@ Quake is required in order to run ezQuake. This will give you the complete singl
 
 <!--@include: ./../parts/download.md-->
 
-([see all releases](/downloads))
+([see all releases](./downloads))
 
 ### 3. Extract ezQuake to your Quake installation directory.
 
