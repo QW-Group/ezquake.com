@@ -29,12 +29,6 @@ export default defineConfig({
     outDir: '../dist',
     ignoreDeadLinks: true,
     cleanUrls: 'without-subfolders',
-    markdown: {
-      theme: {
-        dark: 'github-dark',
-        light: 'github-light',
-      }
-    },
     vite: {
       define: {
         global: {}
