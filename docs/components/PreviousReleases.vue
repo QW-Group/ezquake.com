@@ -1,19 +1,16 @@
 <script>
 
-import { Octokit } from "@octokit/core";
-import siteConfig from "../../config";
-
 export default {
   async setup() {
-    const octokit = new Octokit();
-    const releases = await octokit.request('GET /repos/{owner}/{repo}/releases', siteConfig.githubRepo);
-    console.log(releases.data[0])
+    const releasesResponse = await fetch("https://api.github.com/repos/qw-group/ezquake-source/releases");
+    const releases = await releasesResponse.json()
 
     return {
-      releases: releases.data.slice(1)
+      previousReleases: releases.slice(1)
     }
   }
 }
+
 </script>
 
 <template>
@@ -27,7 +24,7 @@ export default {
       </tr>
     </thead>
     <tbody>
-      <tr v-for="release in releases">
+      <tr v-for="release in previousReleases">
         <td valign="top">{{ release.name }}</td>
         <td valign="top">{{ release.created_at.substring(0, "2020-01-01".length) }}</td>
         <td valign="top">
@@ -37,7 +34,6 @@ export default {
         </td>
       </tr>
     </tbody>
-
   </table>
 
 </template>

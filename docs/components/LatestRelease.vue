@@ -1,18 +1,16 @@
 <script>
 
-import { Octokit } from "@octokit/core";
-import siteConfig from "../../config";
-
 export default {
   async setup() {
-    const octokit = new Octokit();
-    const latestRelease = await octokit.request('GET /repos/{owner}/{repo}/releases/latest', siteConfig.githubRepo);
+    const latestReleaseResponse = await fetch("https://api.github.com/repos/qw-group/ezquake-source/releases/latest");
+    const latestRelease = await latestReleaseResponse.json()
 
     return {
-      latestRelease: latestRelease.data
+      latestRelease
     }
   }
 }
+
 </script>
 
 <template>
@@ -35,4 +33,5 @@ export default {
   </div>
 
   <a :href="latestRelease.html_url">View release on GitHub</a>
+
 </template>
