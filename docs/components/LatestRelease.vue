@@ -1,6 +1,6 @@
 <script>
 
-import { Octokit } from "https://cdn.skypack.dev/octokit";
+import { Octokit } from "@octokit/core";
 import siteConfig from "../../config";
 
 export default {
