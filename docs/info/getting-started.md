@@ -3,7 +3,7 @@
 
 # Getting started
 
-## Installing ezQuake
+## Installation
 
 ### 1. Install Quake
 
@@ -14,7 +14,7 @@ Quake is required in order to run ezQuake.
 
 ### 2. Install ezQuake
 
-Download a binary and extract to into your Quake root directory, for example `c:/quake`.
+Download an ezQuake binary and extract to into your Quake root directory, for example `c:/quake`.
 
 * [Windows](https://github.com/QW-Group/ezquake-source/releases/download/3.6.0/rls-all.zip)
 * [Linux](https://github.com/QW-Group/ezquake-source/releases/download/3.6-dev-alpha10-dev/ezquake-latest-linux64.zip)
