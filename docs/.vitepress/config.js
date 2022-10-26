@@ -56,7 +56,6 @@ export default defineConfig({
             items: [
               { text: 'Documentation index', link: '/docs' },
               { text: 'Frequently Asked Questions', link: '/docs/faq' },
-              { text: 'File and directory structure', link: '/docs/structure' },
             ]
           },
           {
@@ -111,6 +110,7 @@ export default defineConfig({
           {
             text: 'Misc',
             items: [
+              { text: 'Files and directory structure', link: '/docs/structure' },
               { text: 'Upgrading', link: '/docs/upgrading' },
             ]
           },
