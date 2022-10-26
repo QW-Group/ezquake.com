@@ -36,7 +36,7 @@ for group_obj in values["groups"]:
         continue
 
     if major_group_slug not in result_tree:
-        major_group_url = f"/docs/vars/{major_group_slug}/"
+        major_group_url = f"/docs/settings/{major_group_slug}/"
 
         result_tree[major_group_slug] = {
             "title": major_group,

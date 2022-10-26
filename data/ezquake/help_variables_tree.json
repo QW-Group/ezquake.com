@@ -2,13 +2,13 @@
   "miscellaneous": {
     "title": "Miscellaneous",
     "slug": "miscellaneous",
-    "url": "/docs/vars/miscellaneous/",
+    "url": "/docs/settings/miscellaneous/",
     "items": [
       {
         "id": "0",
         "title": "(added by system)",
         "slug": "added-by-system",
-        "url": "/docs/vars/miscellaneous/#added-by-system",
+        "url": "/docs/settings/miscellaneous/#added-by-system",
         "items": [
           {
             "default": "0.5",
@@ -355,7 +355,7 @@
         "id": "4",
         "title": "Config Management",
         "slug": "config-management",
-        "url": "/docs/vars/miscellaneous/#config-management",
+        "url": "/docs/settings/miscellaneous/#config-management",
         "items": [
           {
             "default": "0",
@@ -571,7 +571,7 @@
         "id": "12",
         "title": "IRC Client",
         "slug": "irc-client",
-        "url": "/docs/vars/miscellaneous/#irc-client",
+        "url": "/docs/settings/miscellaneous/#irc-client",
         "items": [
           {
             "desc": "IP address of the IRC server to connect to on irc connect command.",
@@ -615,7 +615,7 @@
         "id": "17",
         "title": "Menu",
         "slug": "menu",
-        "url": "/docs/vars/miscellaneous/#menu",
+        "url": "/docs/settings/miscellaneous/#menu",
         "items": [
           {
             "default": "255 170 0 255",
@@ -855,7 +855,7 @@
         "id": "22",
         "title": "Not settable",
         "slug": "not-settable",
-        "url": "/docs/vars/miscellaneous/#not-settable",
+        "url": "/docs/settings/miscellaneous/#not-settable",
         "items": [
           {
             "default": "",
@@ -877,7 +877,7 @@
         "id": "2",
         "title": "Other",
         "slug": "other",
-        "url": "/docs/vars/miscellaneous/#other",
+        "url": "/docs/settings/miscellaneous/#other",
         "items": [
           {
             "default": "",
@@ -960,7 +960,7 @@
         "id": "48",
         "title": "System Settings",
         "slug": "system-settings",
-        "url": "/docs/vars/miscellaneous/#system-settings",
+        "url": "/docs/settings/miscellaneous/#system-settings",
         "items": [
           {
             "default": "0",
@@ -1135,13 +1135,13 @@
   "hud": {
     "title": "HUD",
     "slug": "hud",
-    "url": "/docs/vars/hud/",
+    "url": "/docs/settings/hud/",
     "items": [
       {
         "id": "3",
         "title": "Chat Settings",
         "slug": "chat-settings",
-        "url": "/docs/vars/hud/#chat-settings",
+        "url": "/docs/settings/hud/#chat-settings",
         "items": [
           {
             "default": "1",
@@ -1482,7 +1482,7 @@
         "id": "5",
         "title": "Console Settings",
         "slug": "console-settings",
-        "url": "/docs/vars/hud/#console-settings",
+        "url": "/docs/settings/hud/#console-settings",
         "items": [
           {
             "default": "2",
@@ -2147,7 +2147,7 @@
         "id": "19",
         "title": "MQWCL HUD",
         "slug": "mqwcl-hud",
-        "url": "/docs/vars/hud/#mqwcl-hud",
+        "url": "/docs/settings/hud/#mqwcl-hud",
         "items": [
           {
             "desc": "Sets align of number of shells for both horizontal and vertical direction.",
@@ -9927,7 +9927,7 @@
         "id": "47",
         "title": "Status Bar and Scoreboard",
         "slug": "status-bar-and-scoreboard",
-        "url": "/docs/vars/hud/#status-bar-and-scoreboard",
+        "url": "/docs/settings/hud/#status-bar-and-scoreboard",
         "items": [
           {
             "default": "0",
@@ -10575,13 +10575,13 @@
   "graphics": {
     "title": "Graphics",
     "slug": "graphics",
-    "url": "/docs/vars/graphics/",
+    "url": "/docs/settings/graphics/",
     "items": [
       {
         "id": "6",
         "title": "Crosshair Settings",
         "slug": "crosshair-settings",
-        "url": "/docs/vars/graphics/#crosshair-settings",
+        "url": "/docs/settings/graphics/#crosshair-settings",
         "items": [
           {
             "default": "0",
@@ -10735,7 +10735,7 @@
         "id": "8",
         "title": "FPS and EyeCandy Settings",
         "slug": "fps-and-eyecandy-settings",
-        "url": "/docs/vars/graphics/#fps-and-eyecandy-settings",
+        "url": "/docs/settings/graphics/#fps-and-eyecandy-settings",
         "items": [
           {
             "default": "0",
@@ -11840,7 +11840,7 @@
         "id": "15",
         "title": "Lighting",
         "slug": "lighting",
-        "url": "/docs/vars/graphics/#lighting",
+        "url": "/docs/settings/graphics/#lighting",
         "items": [
           {
             "default": "1",
@@ -12084,7 +12084,7 @@
         "id": "35",
         "title": "OpenGL Rendering",
         "slug": "opengl-rendering",
-        "url": "/docs/vars/graphics/#opengl-rendering",
+        "url": "/docs/settings/graphics/#opengl-rendering",
         "items": [
           {
             "default": "2.0",
@@ -12475,7 +12475,7 @@
         "id": "36",
         "title": "Particle Effects",
         "slug": "particle-effects",
-        "url": "/docs/vars/graphics/#particle-effects",
+        "url": "/docs/settings/graphics/#particle-effects",
         "items": [
           {
             "default": "1",
@@ -12976,7 +12976,7 @@
         "id": "39",
         "title": "Screen & Powerup Blends",
         "slug": "screen-powerup-blends",
-        "url": "/docs/vars/graphics/#screen-powerup-blends",
+        "url": "/docs/settings/graphics/#screen-powerup-blends",
         "items": [
           {
             "default": "0",
@@ -13110,7 +13110,7 @@
         "id": "40",
         "title": "Screen Settings",
         "slug": "screen-settings",
-        "url": "/docs/vars/graphics/#screen-settings",
+        "url": "/docs/settings/graphics/#screen-settings",
         "items": [
           {
             "default": "0",
@@ -14849,7 +14849,7 @@
         "id": "41",
         "title": "Screenshot Settings",
         "slug": "screenshot-settings",
-        "url": "/docs/vars/graphics/#screenshot-settings",
+        "url": "/docs/settings/graphics/#screenshot-settings",
         "items": [
           {
             "default": "75",
@@ -14918,7 +14918,7 @@
         "id": "50",
         "title": "Texture Settings",
         "slug": "texture-settings",
-        "url": "/docs/vars/graphics/#texture-settings",
+        "url": "/docs/settings/graphics/#texture-settings",
         "items": [
           {
             "default": "1",
@@ -15298,7 +15298,7 @@
         "id": "51",
         "title": "Turbulency and Sky Settings",
         "slug": "turbulency-and-sky-settings",
-        "url": "/docs/vars/graphics/#turbulency-and-sky-settings",
+        "url": "/docs/settings/graphics/#turbulency-and-sky-settings",
         "items": [
           {
             "default": "0",
@@ -15645,7 +15645,7 @@
         "id": "52",
         "title": "Video Settings",
         "slug": "video-settings",
-        "url": "/docs/vars/graphics/#video-settings",
+        "url": "/docs/settings/graphics/#video-settings",
         "items": [
           {
             "default": "0",
@@ -16080,7 +16080,7 @@
         "id": "53",
         "title": "View Settings",
         "slug": "view-settings",
-        "url": "/docs/vars/graphics/#view-settings",
+        "url": "/docs/settings/graphics/#view-settings",
         "items": [
           {
             "default": "20",
@@ -16277,7 +16277,7 @@
         "id": "54",
         "title": "Weapon View Model Settings",
         "slug": "weapon-view-model-settings",
-        "url": "/docs/vars/graphics/#weapon-view-model-settings",
+        "url": "/docs/settings/graphics/#weapon-view-model-settings",
         "items": [
           {
             "default": "0",
@@ -16397,13 +16397,13 @@
   "demos": {
     "title": "Demos",
     "slug": "demos",
-    "url": "/docs/vars/demos/",
+    "url": "/docs/settings/demos/",
     "items": [
       {
         "id": "7",
         "title": "Demo Handling",
         "slug": "demo-handling",
-        "url": "/docs/vars/demos/#demo-handling",
+        "url": "/docs/settings/demos/#demo-handling",
         "items": [
           {
             "default": "5",
@@ -16631,7 +16631,7 @@
         "id": "16",
         "title": "Match Tools",
         "slug": "match-tools",
-        "url": "/docs/vars/demos/#match-tools",
+        "url": "/docs/settings/demos/#match-tools",
         "items": [
           {
             "default": "1",
@@ -17026,7 +17026,7 @@
         "id": "20",
         "title": "MultiView Demos",
         "slug": "multiview-demos",
-        "url": "/docs/vars/demos/#multiview-demos",
+        "url": "/docs/settings/demos/#multiview-demos",
         "items": [
           {
             "default": "0",
@@ -17554,13 +17554,13 @@
   "input": {
     "title": "Input",
     "slug": "input",
-    "url": "/docs/vars/input/",
+    "url": "/docs/settings/input/",
     "items": [
       {
         "id": "9",
         "title": "Input - Keyboard",
         "slug": "input-keyboard",
-        "url": "/docs/vars/input/#input-keyboard",
+        "url": "/docs/settings/input/#input-keyboard",
         "items": [
           {
             "default": "2",
@@ -17818,7 +17818,7 @@
         "id": "10",
         "title": "Input - Misc",
         "slug": "input-misc",
-        "url": "/docs/vars/input/#input-misc",
+        "url": "/docs/settings/input/#input-misc",
         "items": [
           {
             "default": "1",
@@ -17874,7 +17874,7 @@
         "id": "11",
         "title": "Input - Mouse",
         "slug": "input-mouse",
-        "url": "/docs/vars/input/#input-mouse",
+        "url": "/docs/settings/input/#input-mouse",
         "items": [
           {
             "default": "1",
@@ -18024,13 +18024,13 @@
   "teamplay": {
     "title": "Teamplay",
     "slug": "teamplay",
-    "url": "/docs/vars/teamplay/",
+    "url": "/docs/settings/teamplay/",
     "items": [
       {
         "id": "13",
         "title": "Item Names",
         "slug": "item-names",
-        "url": "/docs/vars/teamplay/#item-names",
+        "url": "/docs/settings/teamplay/#item-names",
         "items": [
           {
             "default": "armor",
@@ -18408,7 +18408,7 @@
         "id": "14",
         "title": "Item Need Amounts",
         "slug": "item-need-amounts",
-        "url": "/docs/vars/teamplay/#item-need-amounts",
+        "url": "/docs/settings/teamplay/#item-need-amounts",
         "items": [
           {
             "default": "13",
@@ -18503,7 +18503,7 @@
         "id": "49",
         "title": "Teamplay Communications",
         "slug": "teamplay-communications",
-        "url": "/docs/vars/teamplay/#teamplay-communications",
+        "url": "/docs/settings/teamplay/#teamplay-communications",
         "items": [
           {
             "default": "0",
@@ -18666,20 +18666,20 @@
   "sound": {
     "title": "Sound",
     "slug": "sound",
-    "url": "/docs/vars/sound/",
+    "url": "/docs/settings/sound/",
     "items": [
       {
         "id": "18",
         "title": "MP3 Settings",
         "slug": "mp3-settings",
-        "url": "/docs/vars/sound/#mp3-settings",
+        "url": "/docs/settings/sound/#mp3-settings",
         "items": []
       },
       {
         "id": "45",
         "title": "Sound Settings",
         "slug": "sound-settings",
-        "url": "/docs/vars/sound/#sound-settings",
+        "url": "/docs/settings/sound/#sound-settings",
         "items": [
           {
             "default": "1",
@@ -18972,7 +18972,7 @@
         "id": "32",
         "title": "VOIP",
         "slug": "voip",
-        "url": "/docs/vars/sound/#voip",
+        "url": "/docs/settings/sound/#voip",
         "items": [
           {
             "desc": "Volume multiplier applied while capturing, to avoid your audio from being heard by others.",
@@ -19101,13 +19101,13 @@
   "multiplayer": {
     "title": "Multiplayer",
     "slug": "multiplayer",
-    "url": "/docs/vars/multiplayer/",
+    "url": "/docs/settings/multiplayer/",
     "items": [
       {
         "id": "21",
         "title": "Network Settings",
         "slug": "network-settings",
-        "url": "/docs/vars/multiplayer/#network-settings",
+        "url": "/docs/settings/multiplayer/#network-settings",
         "items": [
           {
             "default": "3",
@@ -19439,7 +19439,7 @@
         "id": "37",
         "title": "Player Settings",
         "slug": "player-settings",
-        "url": "/docs/vars/multiplayer/#player-settings",
+        "url": "/docs/settings/multiplayer/#player-settings",
         "items": [
           {
             "default": "",
@@ -19835,7 +19835,7 @@
         "id": "38",
         "title": "QTV Settings",
         "slug": "qtv-settings",
-        "url": "/docs/vars/multiplayer/#qtv-settings",
+        "url": "/docs/settings/multiplayer/#qtv-settings",
         "items": [
           {
             "default": "1",
@@ -20028,7 +20028,7 @@
         "id": "42",
         "title": "Server Browser",
         "slug": "server-browser",
-        "url": "/docs/vars/multiplayer/#server-browser",
+        "url": "/docs/settings/multiplayer/#server-browser",
         "items": [
           {
             "default": "1",
@@ -20517,7 +20517,7 @@
         "id": "44",
         "title": "Skin Settings",
         "slug": "skin-settings",
-        "url": "/docs/vars/multiplayer/#skin-settings",
+        "url": "/docs/settings/multiplayer/#skin-settings",
         "items": [
           {
             "default": "base",
@@ -21003,7 +21003,7 @@
         "id": "46",
         "title": "Spectator Tracking",
         "slug": "spectator-tracking",
-        "url": "/docs/vars/multiplayer/#spectator-tracking",
+        "url": "/docs/settings/multiplayer/#spectator-tracking",
         "items": [
           {
             "default": "100",
@@ -21156,13 +21156,13 @@
   "server": {
     "title": "Server",
     "slug": "server",
-    "url": "/docs/vars/server/",
+    "url": "/docs/settings/server/",
     "items": [
       {
         "id": "43",
         "title": "Server Settings",
         "slug": "server-settings",
-        "url": "/docs/vars/server/#server-settings",
+        "url": "/docs/settings/server/#server-settings",
         "items": [
           {
             "default": "1",
