@@ -12,7 +12,9 @@ Quake is required in order to run ezQuake.
 * [Buy Quake on Steam](https://store.steampowered.com/app/2310/QUAKE/)<br/>
   This will give you the complete single-player game
 
-### 2. Download ezQuake
+### 2. Install ezQuake
+
+Download a binary and extract to into your Quake root directory, for example `c:/quake`.
 
 * [Windows](https://github.com/QW-Group/ezquake-source/releases/download/3.6.0/rls-all.zip)
 * [Linux](https://github.com/QW-Group/ezquake-source/releases/download/3.6-dev-alpha10-dev/ezquake-latest-linux64.zip)
@@ -20,11 +22,7 @@ Quake is required in order to run ezQuake.
 
 ([see all releases](./downloads))
 
-### 3. Extract ezQuake
-
-Extract ezQuake into your Quake root directory, for example `c:/quake`
-
-### 4. All set!
+### 3. All set!
 
 You can now start playing ezQuake.
 
