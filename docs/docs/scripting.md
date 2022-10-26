@@ -4,7 +4,7 @@ outline: [2,3]
 
 # Scripting
 
-## What is a script
+## What is a script?
 
 Script is a piece of text your client understands. It means you can type that text into the console and after hitting [Enter] something happens.
 
@@ -24,7 +24,7 @@ Since it's pretty boring to type long scripts containing many lines manually int
 we are able to store it in a file which can be loaded on our request. QuakeWorld scripts are usualy
 stored in files with extension .cfg (which is not necessary) somewhere in your Quake directory.
 For a start it's good idea to place your configs into `quake/id1/` subdirectory, so it can be e.g.:
-`Quake\id1\myscript.cfg`.
+`Quake/id1/myscript.cfg`.
 
 Such file is usually called "config" (abbrevation of "configuration file") or simply "script".
 
@@ -69,44 +69,11 @@ E.g. `/name` will tell you what is your current nickname.
 By typing `/<variable_name> <new_value>` you will change the value of given variable.
 E.g. `/volume 0` will mute all game sounds.
 
-## Common scripts
+## Commonly used scripts
 
-### Weapon scripts
+See [weapon scripts](./weapon-scripts) and [teamplay communication](./teamplay-communication).
 
-If you want to make your life as a QW player easier, you can start by using a weapon script. What a weapon script does is that it selects the wanted weapon, and
-if it doesn't exist, it chooses the best weapon available. When you've fired the weapon it switches to the Shotgun or the Axe (cannot be dropped in backpack) to
-ensure that the enemy does not get a valuable weapon if he manages to kill you.
-
-Example: this command will first try to select rocket launcher, then super-nailgun, then super-shotgun and if you don't have even this weapon it will choose
-shotgun.
-
-```
-/impulse "7 5 3 2"
-```
-
-You can write all sorts of scripts, the only thing holding you back is your own imagination!
-
-### Boomstick/Axe script
-
-What about not giving away the powerful Rocket Launcher? When you get fragged by another player he will get the weapon which you had selected last. If you are
-clever you would manually change to a weaker weapon before he kills you but you can make a script which does that for you in the heat of the battle.
-
-```
-alias +rl "impulse 7;+attack"
-alias -rl "-attack;impulse 1"
-bind mouse1 "+rl"
-```
-
-### Teamplay messages scripts
-
-This client comes with an in-built set of automated messages used for communication in teamplay modes. You can find those in the Options menu, where you can
-bind them to your keys.
-
-Professional players use macros (see below) to create even more intelligent communication messages with the team. This manual will explain to you all the
-scripting possibilities but won't tell you how should such config look. There's a teamplay messages config distributed along with ezQuake, you can find this and
-other configs in the config dir in the git repository. Note that it's becoming very outdated nowadays, we recommend that you use the in-built messages.
-
-## Advanced scripting
+## Advanced scripts
 
 ### User-created variables
 
@@ -140,7 +107,7 @@ say, say_team, echo, if, and some other commands.
 
 ### Mathematical operations
 
-This client allows you to use some basic mathematical operations on your variables using set_calc command: `set_calc <cvar> <command> <command arguments>`
+ezQuake allows you to use some basic mathematical operations on your variables using set_calc command: `set_calc <cvar> <command> <command arguments>`
 `/set_calc <cvar> <argument1> <operator> <argument2>`
 valid commands: `strlen int substr set_substr pos`
 valid operators: `+ - * / div %% and or xor`.
@@ -240,7 +207,7 @@ This will use the "new if command"
 
 ### Regexp matching
 
-This client supports multiple params & regexp match for 'viewalias, unalias_re, toggle_re, cvar_reset_re'
+ezQuake supports multiple params & regexp match for 'viewalias, unalias_re, toggle_re, cvar_reset_re'
 Regexp match support for 'aliaslist, cvarlist, cmdlist, macrolist'.
 
 **Examples**

@@ -1,9 +1,12 @@
 ---
-layout: default
-tab: Documentation
 ---
 
 # Teamplay
+
+## Messages
+
+ezQuake comes with an in-built set of automated messages used for communication in teamplay modes. You can find those in the Options menu, where you can bind
+them to your keys.
 
 ## Pointing
 
