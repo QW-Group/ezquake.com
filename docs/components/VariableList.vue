@@ -1,5 +1,6 @@
 <script>
 import variables from './../../data/ezquake/help_variables_tree.json';
+import { slugify } from "./util";
 import VariableListItem from './VariableListItem.vue';
 
 export default {
@@ -9,6 +10,7 @@ export default {
   },
   data() {
     return {
+      slugify,
       variables
     }
   }
@@ -23,7 +25,7 @@ export default {
 
       <table style="font-size: 0.85em">
         <tbody>
-          <tr v-for="item in group.items">
+          <tr v-for="item in group.items" :id="slugify(item.name)">
             <td valign="top">
               <VariableListItem :item=item />
             </td>
