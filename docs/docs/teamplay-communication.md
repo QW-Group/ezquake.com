@@ -1,7 +1,7 @@
 ---
 ---
 
-# Teamplay
+# Teamplay Communication
 
 ## Messages
 
