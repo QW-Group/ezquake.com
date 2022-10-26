@@ -23,7 +23,7 @@ export default defineConfig({
         { icon: 'discord', link: 'https://discord.quake.world' },
       ],
       editLink: {
-        pattern: 'https://github.com/QW-Group/ezquake.com/blob/main/docs/:path'
+        pattern: 'https://github.com/QW-Group/ezquake.com/edit/main/docs/:path'
       },
       sidebar: {
         '/info/': sidebars.info,
