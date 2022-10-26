@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress';
 
-const communityMenu = {
+const communitySidebar = {
   text: 'Community',
   collapsible: true,
   collapsed: true,
@@ -22,6 +22,13 @@ const topNavItems = [
   { text: 'About', link: '/info/about' },
 ];
 
+const sourceCodeSidebar = {
+  text: 'Source code',
+  items: [
+    { text: 'ezQuake client', link: 'https://github.com/QW-Group/ezquake-source' },
+    { text: 'ezQuake website', link: 'https://github.com/QW-Group/ezquake.com' },
+  ]
+};
 export default defineConfig({
     title: 'ezQuake',
     description: 'a Modern QuakeWorld client',
@@ -49,7 +56,8 @@ export default defineConfig({
           {
             items: topNavItems,
           },
-          communityMenu
+          sourceCodeSidebar,
+          communitySidebar
         ],
         '/docs': [
           {
@@ -114,7 +122,8 @@ export default defineConfig({
               { text: 'Upgrading', link: '/docs/upgrading' },
             ]
           },
-          communityMenu
+          sourceCodeSidebar,
+          communitySidebar
         ]
       }
     }
