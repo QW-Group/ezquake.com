@@ -18,6 +18,11 @@ export default defineConfig({
     themeConfig: {
       logo: '/assets/img/ezquake_logo.png',
       nav: menus.main.items,
+      algolia: {
+        appId: "VSG96RBFXW",
+        apiKey: "aad1ee0a7b2c2bfddfd4ab1beec7332e",
+        indexName: "ezquake",
+      },
       socialLinks: [
         { icon: 'github', link: 'https://github.com/QW-Group/ezquake-source' },
         { icon: 'discord', link: 'https://discord.quake.world' },
