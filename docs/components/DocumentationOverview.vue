@@ -26,7 +26,7 @@ export default {
       <h2>{{ menu.text }}</h2>
       <ul>
         <li v-for="item in menu.items">
-          <a :href="item.link">{{ item.text }}</a>
+          <a :href="item.link + '.html'">{{ item.text }}</a>
         </li>
       </ul>
     </div>
