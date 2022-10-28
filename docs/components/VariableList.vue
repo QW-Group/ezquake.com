@@ -25,7 +25,7 @@ export default {
 
       <table style="font-size: 0.85em">
         <tbody>
-          <tr v-for="item in group.items" :id="slugify(item.name)">
+          <tr v-for="item in group.items" :id="slugify(item.name)" class="algolia-3">
             <td valign="top">
               <VariableListItem :item=item />
             </td>
