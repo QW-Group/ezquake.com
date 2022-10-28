@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "firebase-tools": "^11.15.0",
-    "vitepress": "^1.0.0-alpha.25",
+    "vitepress": "^1.0.0-alpha.26",
     "vue": "^3.2.41"
   }
 }
