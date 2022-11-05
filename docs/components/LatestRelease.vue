@@ -21,7 +21,7 @@ export default {
 <template>
 
   <h3>ezQuake {{ latestRelease.name }}</h3>
-  <p>Released on {{ latestRelease.created_at.substring(0, "2001-01-01".length) }}, </p>
+  <p>Released on {{ latestRelease.created_at.substring(0, "2001-01-01".length) }}</p>
 
   <div v-if="latestRelease.assets.length">
     <strong>Assets</strong>
