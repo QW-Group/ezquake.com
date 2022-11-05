@@ -6,7 +6,7 @@ export default {
     const releases = await releasesResponse.json()
 
     return {
-      previousReleases: releases.slice(2) // ignore last 2, special case due to new versioning system, should be 1.
+      previousReleases: releases.slice(1) // ignore last 2, special case due to new versioning system, should be 1.
     }
   }
 }
