@@ -1,5 +1,7 @@
 <script>
 
+import Markdown from "./Markdown.vue";
+
 export default {
   async setup() {
     const latestReleaseResponse = await fetch("https://api.github.com/repos/qw-group/ezquake-source/releases/latest");
@@ -8,6 +10,9 @@ export default {
     return {
       latestRelease
     }
+  },
+  components: {
+    Markdown,
   }
 }
 
@@ -16,7 +21,7 @@ export default {
 <template>
 
   <h3>ezQuake {{ latestRelease.name }}</h3>
-  <p>Released on {{ latestRelease.created_at.substring(0, "2001-01-01".length) }}</p>
+  <p>Released on {{ latestRelease.created_at.substring(0, "2001-01-01".length) }}, </p>
 
   <div v-if="latestRelease.assets.length">
     <strong>Assets</strong>
@@ -27,11 +32,13 @@ export default {
     </ul>
   </div>
 
-  <div style="margin: 1em 0" v-if="latestRelease.body">
-    <strong>Notes</strong><br />
-    {{ latestRelease.body }}
-  </div>
+  <a :href="latestRelease.html_url"><strong>View release on GitHub</strong></a>
 
-  <a :href="latestRelease.html_url">View release on GitHub</a>
+  <div style="margin: 1em 0" v-if="latestRelease.body">
+    <details class="details custom-block">
+      <summary>Release notes</summary>
+      <Markdown :content="latestRelease.body" headeroffset="3" />
+    </details>
+  </div>
 
 </template>
