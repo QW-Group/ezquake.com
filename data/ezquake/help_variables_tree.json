@@ -9969,6 +9969,40 @@
             "name": "hud_teaminfo_show"
           },
           {
+            "desc": "Display ammo count next to best weapon in the teaminfo.",
+            "group-id": "19",
+            "remarks": "If disabled, ammo can still be displayed by adding %c to /hud_teaminfo_layout",
+            "type": "boolean",
+            "values": [
+              {
+                "description": "Do not show ammo next to best weapon",
+                "name": "0"
+              },
+              {
+                "description": "Show ammo next to best weapon",
+                "name": "1"
+              }
+            ],
+            "name": "hud_teaminfo_show_ammo"
+          },
+          {
+            "desc": "Shows respawn time instead of powerups during wipeout mode.",
+            "group-id": "19",
+            "remarks": "If disabled, countdown can still be displayed by adding %r to /hud_teaminfo_layout",
+            "type": "boolean",
+            "values": [
+              {
+                "description": "Do not show respawn time instead of powerups in wipeout mode",
+                "name": "0"
+              },
+              {
+                "description": "Show respawn time instead of powerups in wipeout mode",
+                "name": "1"
+              }
+            ],
+            "name": "hud_teaminfo_show_countdown"
+          },
+          {
             "desc": "Show information about the enemy team(s) in the teaminfo window. Displays a header for each team consisting of the team name and the current team score.",
             "group-id": "19",
             "type": "boolean",
@@ -10854,6 +10888,22 @@
               }
             ],
             "name": "scr_scoreboard_teamsort"
+          },
+          {
+            "default": "1",
+            "group-id": "47",
+            "type": "boolean",
+            "values": [
+              {
+                "description": "Display normal scoreboard during clan arena or wipeout modes.",
+                "name": "false"
+              },
+              {
+                "description": "Display game-specific scoreboard during clan arena or wipeout modes.",
+                "name": "true"
+              }
+            ],
+            "name": "scr_scoreboard_wipeout"
           }
         ]
       }
@@ -14639,6 +14689,13 @@
             "name": "scr_shownick_scale"
           },
           {
+            "default": "0",
+            "desc": "Displays ammo count next to best weapon.",
+            "group-id": "40",
+            "type": "boolean",
+            "name": "scr_shownick_show_ammo"
+          },
+          {
             "default": "0.8",
             "desc": "Number of seconds to show results of '/shownick 1' command in KTX.",
             "group-id": "40",
@@ -14850,6 +14907,42 @@
               }
             ],
             "name": "scr_teaminfo_scale"
+          },
+          {
+            "default": "0",
+            "desc": "Will show ammo count next to best weapon in teaminfo table.",
+            "group-id": "40",
+            "remarks": "If disabled, ammo can still be displayed by adding %c to /scr_teaminfo_order",
+            "type": "boolean",
+            "values": [
+              {
+                "description": "Do not show ammo next to best weapon.",
+                "name": "0"
+              },
+              {
+                "description": "Show ammo next to best weapon.",
+                "name": "1"
+              }
+            ],
+            "name": "scr_teaminfo_show_ammo"
+          },
+          {
+            "default": "0",
+            "desc": "Shows respawn time instead of powerups during wipeout mode.",
+            "group-id": "40",
+            "remarks": "If disabled, countdown can still be displayed by adding %r to /scr_teaminfo_order",
+            "type": "boolean",
+            "values": [
+              {
+                "description": "Do not show respawn time instead of powerups in wipeout mode",
+                "name": "0"
+              },
+              {
+                "description": "Show respawn time instead of powerups in wipeout mode",
+                "name": "1"
+              }
+            ],
+            "name": "scr_teaminfo_show_countdown"
           },
           {
             "default": "0",
