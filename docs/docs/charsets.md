@@ -2,7 +2,17 @@
 ---
 
 # Charsets
+A charset is an image the represent the console characters.
 
+## How to change charset
+You can create your own charset or download from [QuakeWorld GFX](https://gfx.quakeworld.nu/browse/charsets/)
+
+1) Place the charset image in `/qw/textures/charsets/`
+2) Run the command `/loadcharset <filename>` to load the charset.
+
+**Example**
+
+`/loadcharset foo.png` to load `/qw/textures/charsets/foo.png`.
 
 ## Colored text
 
