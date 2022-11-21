@@ -2,7 +2,7 @@
 ---
 
 # Charsets
-A charset is an image the represent the console characters.
+A charset is an image that represent the console characters.
 
 ## How to change charset
 You can create your own charset or download from [QuakeWorld GFX](https://gfx.quakeworld.nu/browse/charsets/)
