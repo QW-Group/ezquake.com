@@ -146,6 +146,40 @@ Textures for 3d models located around the map.
 |------------------|--------------------------------------|-------------------------------------------------|
 | Backpack         | `/qw/textures/models/backpack_0.png` | ![](/assets/img/textures/models/backpack_0.png) |
 
+### Health packs
+
+#### Small health pack
+
+| Description | File locations                    | Example                                      |
+|-------------|-----------------------------------|----------------------------------------------|
+| Top         | `/qw/textures/bmodels/med3_0.png` | ![](/assets/img/textures/bmodels/med3_0.png) |
+| Side        | `/qw/textures/bmodels/med3_1.png` | ![](/assets/img/textures/bmodels/med3_1.png) |
+
+#### Large health pack
+
+Animated using several textures (frames).
+
+| Description    | File locations                       | Example                                         |
+|----------------|--------------------------------------|-------------------------------------------------|
+| Top (frame 1)  | `/qw/textures/bmodels/+0_med25.png`  | ![](/assets/img/textures/bmodels/+0_med25.png)  |
+| Top (frame 2)  | `/qw/textures/bmodels/+1_med25.png`  | ![](/assets/img/textures/bmodels/+1_med25.png)  |
+| Top (frame 3)  | `/qw/textures/bmodels/+2_med25.png`  | ![](/assets/img/textures/bmodels/+2_med25.png)  |
+| Top (frame 4)  | `/qw/textures/bmodels/+3_med25.png`  | ![](/assets/img/textures/bmodels/+3_med25.png)  |
+| Side (frame 1) | `/qw/textures/bmodels/+0_med25s.png` | ![](/assets/img/textures/bmodels/+0_med25s.png) |
+| Side (frame 2) | `/qw/textures/bmodels/+1_med25s.png` | ![](/assets/img/textures/bmodels/+1_med25s.png) |
+
+#### Mega health
+
+Animated using several textures (frames).
+
+| Description    | File locations                       | Example                                         |
+|----------------|--------------------------------------|-------------------------------------------------|
+| Top            | `/qw/textures/bmodels/med100.png`    | ![](/assets/img/textures/bmodels/med100.png)    |
+| Side (frame 1) | `/qw/textures/bmodels/+0_med100.png` | ![](/assets/img/textures/bmodels/+0_med100.png) |
+| Side (frame 2) | `/qw/textures/bmodels/+1_med100.png` | ![](/assets/img/textures/bmodels/+1_med100.png) |
+| Side (frame 3) | `/qw/textures/bmodels/+2_med100.png` | ![](/assets/img/textures/bmodels/+2_med100.png) |
+| Side (frame 4) | `/qw/textures/bmodels/+3_med100.png` | ![](/assets/img/textures/bmodels/+3_med100.png) |
+
 ### Powerups
 
 | Item             | File location                        |
