@@ -63,6 +63,8 @@ See [HUD](./hud) for info on how to configure the HUD.
 
 Numbers display health, armor, ammo and game clock.
 
+**Tip**: Use [HUD Numbers Generator](https://vikpe.org/qwnum/) to create HUD numbers using any Google Font.
+
 #### Nums
 
 Used for high ammo count and medium to high health.
