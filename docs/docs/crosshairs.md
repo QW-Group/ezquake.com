@@ -54,7 +54,7 @@ You can use a PNG/TGA/PCX image as a crosshair. PNG transparency is supported.
 
 **Enable crosshair image**
 
-1. Place the image in `/ezquake/crosshairs/`
+1. Place the image in `/qw/crosshairs/`
 2. Load it using `/crosshairimage <file name>`, example `/crosshairimage dot.png`.
 
 **Disable crosshair image**

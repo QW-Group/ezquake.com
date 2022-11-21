@@ -10,7 +10,7 @@ ezQuake uses very wide range of skin rules and this page should explain how the 
 
 Textures used on the players in the game are called skins.
 
-Each player has own "skin" setting represented by the variable in every QuakeWorld client. Also each player has own set of textures stored in `quake/qw/skins`
+Each player has own "skin" setting represented by the variable in every QuakeWorld client. Also each player has own set of textures stored in `/qw/skins/`
 directory. From this directory the client reads the textures that it will apply on players according to skin rules.
 
 ## Commands
