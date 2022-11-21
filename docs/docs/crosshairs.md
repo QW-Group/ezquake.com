@@ -54,8 +54,8 @@ You can use a PNG/TGA/PCX image as a crosshair. PNG transparency is supported.
 
 **Enable crosshair image**
 
-1. Place the image in `quake\ezquake\crosshairs\`
-2. Load it using `/crosshairimage [file_name]`
+1. Place the image in `/ezquake/crosshairs/`
+2. Load it using `/crosshairimage <file name>`, example `/crosshairimage dot.png`.
 
 **Disable crosshair image**
 
@@ -82,7 +82,7 @@ should be positioned over pixel (2\^(n-1), 2\^(n-1)).
 image, `crosshair 1` will change.
 
 You can change what `crosshair 1` looks like without editing your charset by creating a file called `crosshair.txt`
-in `quake\ezquake\crosshairs\crosshair.txt`.
+in `/ezquake/crosshairs/crosshair.txt`.
 
 The format of `crosshair.txt` is:
 
