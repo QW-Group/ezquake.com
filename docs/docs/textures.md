@@ -140,6 +140,43 @@ Textures for 3d models located around the map.
 | Yellow Armor     | `/qw/textures/models/armor_1.png`    | ![](/assets/img/textures/models/armor_1.png) |
 | Red Armor        | `/qw/textures/models/armor_2.png`    | ![](/assets/img/textures/models/armor_2.png) |
 
+### Ammo
+
+#### Shells
+
+| Description                   | File location                        | Example                                         |
+|-------------------------------|--------------------------------------|-------------------------------------------------|
+| Small shells pack (side)      | `/qw/textures/bmodels/shot0sid.png`  | ![](/assets/img/textures/bmodels/shot0sid.png)  | 
+| Small shells pack (top)       | `/qw/textures/bmodels/shot0top.png`  | ![](/assets/img/textures/bmodels/shot0top.png)  | 
+| Large shells pack (side)      | `/qw/textures/bmodels/shot1sid.png`  | ![](/assets/img/textures/bmodels/shot1sid.png)  | 
+| Large shells pack (top)       | `/qw/textures/bmodels/shot1top.png`  | ![](/assets/img/textures/bmodels/shot1top.png)  | 
+
+#### Nails
+
+| Description                   | File location                        | Example                                         |
+|-------------------------------|--------------------------------------|-------------------------------------------------|
+| Small nails pack (side)       | `/qw/textures/bmodels/nail0sid.png`  | ![](/assets/img/textures/bmodels/nail0sid.png)  | 
+| Small nails pack (top)        | `/qw/textures/bmodels/nail0top.png`  | ![](/assets/img/textures/bmodels/nail0top.png)  | 
+| Large nails pack (side)       | `/qw/textures/bmodels/nail1sid.png`  | ![](/assets/img/textures/bmodels/nail1sid.png)  | 
+| Large nails pack (top)        | `/qw/textures/bmodels/nail1top.png`  | ![](/assets/img/textures/bmodels/nail1top.png)  | 
+
+#### Cells
+
+| Description                   | File location                        | Example                                         |
+|-------------------------------|--------------------------------------|-------------------------------------------------|
+| Small cells pack (side)       | `/qw/textures/bmodels/batt1sid.png`  | ![](/assets/img/textures/bmodels/batt1sid.png)  |
+| Small cells pack (top)        | `/qw/textures/bmodels/batt0top.png`  | ![](/assets/img/textures/bmodels/batt0top.png)  |
+| Large cells pack (side)       | `/qw/textures/bmodels/batt0sid.png`  | ![](/assets/img/textures/bmodels/batt0sid.png)  |
+| Large cells pack (top)        | `/qw/textures/bmodels/batt1top.png`  | ![](/assets/img/textures/bmodels/batt1top.png)  |
+
+#### Rockets
+
+| Description                    | File location                        | Example                                         |
+|--------------------------------|--------------------------------------|-------------------------------------------------|
+| Small rockets pack (side)      | `/qw/textures/bmodels/rock0sid.png`  | ![](/assets/img/textures/bmodels/rock0sid.png)  | 
+| Large rockets pack (side)      | `/qw/textures/bmodels/rock1sid.png`  | ![](/assets/img/textures/bmodels/rock1sid.png)  | 
+| Small/large rockets pack (top) | `/qw/textures/bmodels/rockettop.png` | ![](/assets/img/textures/bmodels/rockettop.png) | 
+
 ### Backpack
 
 | Item             | File location                        | Example                                         |
