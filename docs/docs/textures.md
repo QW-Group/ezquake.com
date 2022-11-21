@@ -4,57 +4,211 @@ outline: [2,4]
 
 # Textures
 
-(this topic was ported quickly from old documentation and needs updated)
+ezQuake supports textures replacement. We recommend downloading textures from [QuakeWorld GFX](https://gfx.quakeworld.nu/)
+and [Quake Revitalization Project (QRP)](http://qrp.quakeone.com/).
 
-## External textures
+## Console background
 
-ezQuake supports textures replacement. We recommend [Quake Revitalization Project (QRP)](https://qrp.quakeone.com/)
-and [QuakeWorld GFX](https://gfx.quakeworld.nu/).
+Replace the console background picture by saving an image to `/qw/gfx/conback.png`.
 
-### Console background
+## Charsets
 
-You can replace the picture that is used as an console background. This file must be named `conback.png` and placed into `qw/gfx`.
+Located in `/qw/textures/charsets/`, see [Charsets](./charsets) for more info.
 
-### Charsets (console font)
+## Crosshairs
 
-See [Charsets](./charsets).
+Located in `/qw/crosshairs/`, see [Crosshairs](./crosshairs) for more info.
 
-### Crosshairs
+## Heads up display (HUD)
 
-See [Crosshairs](./crosshairs).
+See [HUD](./hud) for info on how to configure the HUD.
 
-### Map textures
+### Ammo
 
-Place all the textures in the root directory of the textures dir `qw/textures` or in sub-dirs for each map there. e.g. `qw/textures/dm4`.
+| Item            | File location                    | Example                                     |
+|-----------------|----------------------------------|---------------------------------------------|
+| Shells          | `/qw/textures/wad/sb_shells.png` | ![](/assets/img/textures/wad/sb_shells.png) |
+| Nails           | `/qw/textures/wad/sb_nails.png`  | ![](/assets/img/textures/wad/sb_nails.png)  |
+| Rockets         | `/qw/textures/wad/sb_rocket.png` | ![](/assets/img/textures/wad/sb_rocket.png) |
+| Cells           | `/qw/textures/wad/sb_cells.png`  | ![](/assets/img/textures/wad/sb_cells.png)  |
 
-### Item textures
+### Armors
 
-TODO
+| Item            | File location                    | Example                                     |
+|-----------------|----------------------------------|---------------------------------------------|
+| Green Armor     | `/qw/textures/wad/sb_armor1.png` | ![](/assets/img/textures/wad/sb_armor1.png) |
+| Yellow Armor    | `/qw/textures/wad/sb_armor2.png` | ![](/assets/img/textures/wad/sb_armor2.png) |
+| Red Armor       | `/qw/textures/wad/sb_armor3.png` | ![](/assets/img/textures/wad/sb_armor3.png) |
 
-### Skyboxes
+### Faces (health)
 
-You can also replace textures used as the sky. Textures used as a replacement must have a special naming convetion: each file name consist of these
-parts: `[basename][part][extension]`, where
+| Description              | File location                      | Example                                       |
+|--------------------------|------------------------------------|-----------------------------------------------|
+| Full health              | `/qw/textures/wad/face1.png`       | ![](/assets/img/textures/wad/face1.png)       |
+| Full health (damage)     | `/qw/textures/wad/face_p1.png`     | ![](/assets/img/textures/wad/face_p1.png)     |
+| High health              | `/qw/textures/wad/face2.png`       | ![](/assets/img/textures/wad/face2.png)       |
+| High health (damage)     | `/qw/textures/wad/face_p2.png`     | ![](/assets/img/textures/wad/face_p2.png)     |
+| Medium health            | `/qw/textures/wad/face3.png`       | ![](/assets/img/textures/wad/face3.png)       |
+| Medium health (damage)   | `/qw/textures/wad/face_p3.png`     | ![](/assets/img/textures/wad/face_p3.png)     |
+| Low health               | `/qw/textures/wad/face4.png`       | ![](/assets/img/textures/wad/face4.png)       |
+| Low health (damage)      | `/qw/textures/wad/face_p4.png`     | ![](/assets/img/textures/wad/face_p4.png)     |
+| Very low health          | `/qw/textures/wad/face5.png`       | ![](/assets/img/textures/wad/face5.png)       |
+| Very low health (damage) | `/qw/textures/wad/face_p5.png`     | ![](/assets/img/textures/wad/face_p5.png)     |
+| Quad                     | `/qw/textures/wad/face_quad.png`   | ![](/assets/img/textures/wad/face_quad.png)   |
+| Ring                     | `/qw/textures/wad/face_invis.png`  | ![](/assets/img/textures/wad/face_invis.png)  |
+| Pent                     | `/qw/textures/wad/face_invul2.png` | ![](/assets/img/textures/wad/face_invul2.png) |
+| Pent + Ring              | `/qw/textures/wad/face_inv2.png`   | ![](/assets/img/textures/wad/face_inv2.png)   |
+
+### Numbers
+
+Numbers display health, armor, ammo and game clock.
+
+#### Nums
+
+Used for high ammo count and medium to high health.
+
+| Char | File location                    | Example                                     |
+|------|----------------------------------|---------------------------------------------|
+| 0    | `/qw/textures/wad/num_0.png`     | ![](/assets/img/textures/wad/num_0.png)     |
+| 1    | `/qw/textures/wad/num_1.png`     | ![](/assets/img/textures/wad/num_1.png)     |
+| 2    | `/qw/textures/wad/num_2.png`     | ![](/assets/img/textures/wad/num_2.png)     |
+| 3    | `/qw/textures/wad/num_3.png`     | ![](/assets/img/textures/wad/num_3.png)     |
+| 4    | `/qw/textures/wad/num_4.png`     | ![](/assets/img/textures/wad/num_4.png)     |
+| 5    | `/qw/textures/wad/num_5.png`     | ![](/assets/img/textures/wad/num_5.png)     |
+| 6    | `/qw/textures/wad/num_6.png`     | ![](/assets/img/textures/wad/num_6.png)     |
+| 7    | `/qw/textures/wad/num_7.png`     | ![](/assets/img/textures/wad/num_7.png)     |
+| 8    | `/qw/textures/wad/num_8.png`     | ![](/assets/img/textures/wad/num_8.png)     |
+| 9    | `/qw/textures/wad/num_9.png`     | ![](/assets/img/textures/wad/num_9.png)     |
+| -    | `/qw/textures/wad/num_minus.png` | ![](/assets/img/textures/wad/num_minus.png) |
+| :    | `/qw/textures/wad/num_colon.png` | ![](/assets/img/textures/wad/num_colon.png) |
+| /    | `/qw/textures/wad/num_slash.png` | ![](/assets/img/textures/wad/num_slash.png) |
+
+#### Anums
+
+Used for low ammo count and low health.
+
+| Char | File location                     | Example                                      |
+|------|-----------------------------------|----------------------------------------------|
+| 0    | `/qw/textures/wad/anum_0.png`     | ![](/assets/img/textures/wad/anum_0.png)     |
+| 1    | `/qw/textures/wad/anum_1.png`     | ![](/assets/img/textures/wad/anum_1.png)     |
+| 2    | `/qw/textures/wad/anum_2.png`     | ![](/assets/img/textures/wad/anum_2.png)     |
+| 3    | `/qw/textures/wad/anum_3.png`     | ![](/assets/img/textures/wad/anum_3.png)     |
+| 4    | `/qw/textures/wad/anum_4.png`     | ![](/assets/img/textures/wad/anum_4.png)     |
+| 5    | `/qw/textures/wad/anum_5.png`     | ![](/assets/img/textures/wad/anum_5.png)     |
+| 6    | `/qw/textures/wad/anum_6.png`     | ![](/assets/img/textures/wad/anum_6.png)     |
+| 7    | `/qw/textures/wad/anum_7.png`     | ![](/assets/img/textures/wad/anum_7.png)     |
+| 8    | `/qw/textures/wad/anum_8.png`     | ![](/assets/img/textures/wad/anum_8.png)     |
+| 9    | `/qw/textures/wad/anum_9.png`     | ![](/assets/img/textures/wad/anum_9.png)     |
+| -    | `/qw/textures/wad/anum_minus.png` | ![](/assets/img/textures/wad/anum_minus.png) |
+
+### Powerups
+
+| Item   | File location                    | Example                                     |
+|--------|----------------------------------|---------------------------------------------|
+| Quad   | `/qw/textures/wad/sb_quad.png`   | ![](/assets/img/textures/wad/sb_quad.png)   |
+| Ring   | `/qw/textures/wad/sb_invis.png`  | ![](/assets/img/textures/wad/sb_invis.png)  |
+| Pent   | `/qw/textures/wad/sb_invuln.png` | ![](/assets/img/textures/wad/sb_invuln.png) |
+| Suit   | `/qw/textures/wad/sb_suit.png`   | ![](/assets/img/textures/wad/sb_suit.png)   |
+
+### Sigils and keys
+
+| Item    | File location                    | Example                                     |
+|---------|----------------------------------|---------------------------------------------|
+| Sigil 1 | `/qw/textures/wad/sb_sigil1.png` | ![](/assets/img/textures/wad/sb_sigil1.png) |
+| Sigil 2 | `/qw/textures/wad/sb_sigil2.png` | ![](/assets/img/textures/wad/sb_sigil2.png) |
+| Sigil 3 | `/qw/textures/wad/sb_sigil3.png` | ![](/assets/img/textures/wad/sb_sigil3.png) |
+| Sigil 4 | `/qw/textures/wad/sb_sigil4.png` | ![](/assets/img/textures/wad/sb_sigil4.png) |
+| Key 1   | `/qw/textures/wad/sb_key1.png`   | ![](/assets/img/textures/wad/sb_key1.png)   |
+| Key 2   | `/qw/textures/wad/sb_key2.png`   | ![](/assets/img/textures/wad/sb_key2.png)   |
+
+## Maps
+
+* `/qw/textures/` - Textures shared between maps.
+* `/qw/textures/<map name>` - Map specific textures.
+
+## Models
+
+Textures for 3d models located around the map.
+
+### Armors
+
+| Item             | File location                        | Example                                      |
+|------------------|--------------------------------------|----------------------------------------------|
+| Green Armor      | `/qw/textures/models/armor_0.png`    | ![](/assets/img/textures/models/armor_0.png) |
+| Yellow Armor     | `/qw/textures/models/armor_1.png`    | ![](/assets/img/textures/models/armor_1.png) |
+| Red Armor        | `/qw/textures/models/armor_2.png`    | ![](/assets/img/textures/models/armor_2.png) |
+
+### Backpack
+
+| Item             | File location                        | Example                                         |
+|------------------|--------------------------------------|-------------------------------------------------|
+| Backpack         | `/qw/textures/models/backpack_0.png` | ![](/assets/img/textures/models/backpack_0.png) |
+
+### Powerups
+
+| Item             | File location                        |
+|------------------|--------------------------------------|
+| Ring             | `/qw/textures/models/invisibl_0.png` | 
+| Pent             | `/qw/textures/models/invulner_0.png` | 
+| Quad damage      | `/qw/textures/models/quaddama_0.png` |
+
+### Projectiles
+
+| Item             | File location                        | Example                                        |
+|------------------|--------------------------------------|------------------------------------------------|
+| Grenade          | `/qw/textures/models/grenade_0.png`  | ![](/assets/img/textures/models/grenade_0.png) | 
+| Missile          | `/qw/textures/models/missile_0.png`  | ![](/assets/img/textures/models/missile_0.png) |  
+
+### Weapons
+
+| Item             | File location                        | Example                                        |
+|------------------|--------------------------------------|------------------------------------------------|
+| Super shotgun    | `/qw/textures/models/g_shot_0.png`   | ![](/assets/img/textures/models/g_shot_0.png)  |
+| Nailgun          | `/qw/textures/models/g_nail_0.png`   | ![](/assets/img/textures/models/g_nail_0.png)  | 
+| Super nailgun    | `/qw/textures/models/g_nail2_0.png`  | ![](/assets/img/textures/models/g_nail2_0.png) | 
+| Grenade launcher | `/qw/textures/models/g_rock_0.png`   | ![](/assets/img/textures/models/g_rock_0.png)  | 
+| Rocket launcher  | `/qw/textures/models/g_rock2_0.png`  | ![](/assets/img/textures/models/g_rock2_0.png) | 
+| Lightning gun    | `/qw/textures/models/g_light_0.png`  | ![](/assets/img/textures/models/g_light_0.png) | 
+
+## Weapon viewmodels
+
+Textures for the weapons drawn in your pov.
+
+| Item             | File location                        | Example                                        |
+|------------------|--------------------------------------|------------------------------------------------|
+| Axe              | `/qw/textures/models/v_axe_0.png`    | ![](/assets/img/textures/models/v_axe_0.png)   | 
+| Shotgun          | `/qw/textures/models/v_shot_0.png`   | ![](/assets/img/textures/models/v_shot_0.png)  | 
+| Super shotgun    | `/qw/textures/models/v_shot2_0.png`  | ![](/assets/img/textures/models/v_shot2_0.png) | 
+| Nailgun          | `/qw/textures/models/v_nail_0.png`   | ![](/assets/img/textures/models/v_nail_0.png)  | 
+| Super nailgun    | `/qw/textures/models/v_nail2_0.png`  | ![](/assets/img/textures/models/v_nail2_0.png) | 
+| Grenade launcher | `/qw/textures/models/v_rock_0.png`   | ![](/assets/img/textures/models/v_rock_0.png)  | 
+| Rocket launcher  | `/qw/textures/models/v_rock2_0.png`  | ![](/assets/img/textures/models/v_rock2_0.png) | 
+| Lightning gun    | `/qw/textures/models/v_light_0.png`  | ![](/assets/img/textures/models/v_light_0.png) | 
+
+## Skyboxes
+
+Skyboxes are textures used as the sky.
+
+The skybox textures uses the naming convention: `[basename][part][extension]`, where
 
 * `basename` - is the name that you will use within loadsky command when want to load the sky replacement
-* `part` - is one of 'bk', 'dn', 'lf', 'ft', 'rt' and 'up', and
-* `extension` - is usually .png or .tga
+* `part` - is one of `bk`, `dn`, `lf`, `ft`, `rt` and `up`, and
+* `extension` - is usually `.png` or `.tga`
 
-Those files goes to your `qw/env` directory.
+These files goes into `/qw/env/`.
 
-E.g: You want to use skybox called `Day`. Then you have to have files `daybk.tga`, `daydn.tga`, `dayft.tga`, `daylf.tga`, `dayrt.tga` and `dayup.tga` in your
-skyboxes
-directory. Then you just type `/loadsky day` into the console.
+E.g: You want to use skybox called `Day`. Then you have to have files `daybk.tga`, `daydn.tga`, `dayft.tga`, `daylf.tga`, `dayrt.tga` and `dayup.tga`
+in `/qw/env/`. Then run the command `/loadsky day` into the console.
 
-You can also use `/skygroup` command to define rules to use different sky textures in different maps.
+You can also use the `/skygroup` command to define rules to use different sky textures in different maps.
 
-### Skins
+## Player skins
 
-See [Player Skins](./player-skins)
+Located in `/qw/skins/`, see [Player Skins](./player-skins) for more info.
 
 ## Turning off textures
 
-The client allows a great deal of customisation when rendering the world
+ezQuake allows a great deal of customisation when rendering the world
 
 - `/r_drawflat 1`
     - Ignore textures from the map and render the world as shades. Colors are set depending on the normal of the surface - surfaces pointing more vertically
