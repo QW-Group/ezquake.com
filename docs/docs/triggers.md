@@ -40,7 +40,7 @@ import onTriggers from './../../data/ezquake/on_triggers.json'
         <tr>
             <th>Name</th>
             <th>Description</th>
-            <th>Event value*</th>
+            <th>Event value</th>
         </tr>
     </thead>
     <tbody>
@@ -52,13 +52,13 @@ import onTriggers from './../../data/ezquake/on_triggers.json'
                 {{ trigger.description }}
             </td>
              <td valign="top">
-                `{{ trigger.event_value }}`
+                <code>{{ trigger.event_value }}</code>
             </td>
         </tr>
     </tbody>
 </table>
 
-**note**: 
+**Notes**
 * `on_enter, on_spec_enter, on_enter_ctf, on_enter_ffa` are enabled by default.
 * The other `on_` triggers requires you to call `cmd info ev x` where `x` is the event value. This can be done by defining an `infoset` alias:
 * `alias infoset    "cmd info ev 413" // Enable all`
