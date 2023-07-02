@@ -57,6 +57,7 @@ export const reference = {
     { text: 'Commands', link: '/docs/commands' },
     { text: 'Command Line Parameters', link: '/docs/command-line-parameters' },
     { text: 'Macros', link: '/docs/macros' },
+    { text: 'Triggers', link: '/docs/triggers' },
   ]
 };
 export const graphics = {
