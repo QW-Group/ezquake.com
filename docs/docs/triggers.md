@@ -60,13 +60,13 @@ import onTriggers from './../../data/ezquake/on_triggers.json'
 
 **Notes**
 * `on_enter, on_spec_enter, on_enter_ctf, on_enter_ffa` are enabled by default.
-* The other `on_` triggers requires you to call `cmd info ev x` where `x` is the event value. This can be done by defining an `infoset` alias:
-* `alias infoset    "cmd info ev 413" // Enable all`
-* `alias infoset    "cmd info ev 8"   // Enable on_matchend`
+* The other `on_` triggers requires you to call `cmd info ev x` where `x` is the sum of event values to enable.
+* Calling `cmd info ev` can be done automatically by defining an `infoset` alias in your config, e.g:
+    * `alias infoset    "cmd info ev 413" // Enable all`
+    * `alias infoset    "cmd info ev 8"   // Enable on_matchend`
 
 If you want to customize even further:
 * `on_connect` also enables `on_connect_ctf on_connect_ffa on_observe on_observe_ctf on_observe_ffa`
 * `on_matchstart` also enables `on_spec_matchstart`
 * `on_matchend` also enables `on_spec_matchend`
 * `on_matchbreak` also enables `on_spec_matchbreak`
-  
