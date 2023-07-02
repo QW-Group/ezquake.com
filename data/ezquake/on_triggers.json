@@ -1,0 +1,12 @@
+[
+    {"name": "on_enter", "description": "", "event_value": "(enabled by default)"},
+    {"name": "on_spec_enter", "description": "", "event_value": "(enabled by default)"},
+    {"name": "on_enter_ctf", "description": "", "event_value": "(enabled by default)"},
+    {"name": "on_enter_ffa", "description": "", "event_value": "(enabled by default)"},
+    {"name": "on_connect", "description": "", "event_value": "1"},
+    {"name": "on_matchstart", "description": "", "event_value": "4"},
+    {"name": "on_matchend", "description": "", "event_value": "8"},
+    {"name": "on_matchbreak", "description": "", "event_value": "16"},
+    {"name": "on_admin", "description": "", "event_value": "128"},
+    {"name": "on_unadmin", "description": "", "event_value": "256"}
+]
