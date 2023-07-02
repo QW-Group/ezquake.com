@@ -35,16 +35,6 @@ import onTriggers from './../../data/ezquake/on_triggers.json'
 
 ## on_triggers
 
-**note**: `on_enter, on_spec_enter, on_enter_ctf, on_enter_ffa` are enabled by default. The other `on_` triggers requires you to call `cmd info ev x`, this can be done by settings an `infoset` alias:
-* `alias infoset    "cmd info ev 413" // Sum the ones you want to enable`
-  * `1` = `on_connect`
-  * `4` = `on_matchstart`
-  * `8` = `on_matchend`
-  * `16` = `on_match_break`
-  * `128` = `on_admin`
-  * `256` = `on_unadmin`
-  * `413` (enable all)
-
 <table style="font-size: 0.85em">
     <thead>
         <tr>
@@ -63,6 +53,16 @@ import onTriggers from './../../data/ezquake/on_triggers.json'
         </tr>
     </tbody>
 </table>
+
+**note**: `on_enter, on_spec_enter, on_enter_ctf, on_enter_ffa` are enabled by default. The other `on_` triggers requires you to call `cmd info ev x`, this can be done by settings an `infoset` alias:
+* `alias infoset    "cmd info ev 413" // Sum the ones you want to enable`
+  * `1` = `on_connect`
+  * `4` = `on_matchstart`
+  * `8` = `on_matchend`
+  * `16` = `on_match_break`
+  * `128` = `on_admin`
+  * `256` = `on_unadmin`
+  * `413` (enable all)
 
 If you want to customize even further:
 * `on_connect` also enables `on_connect_ctf on_connect_ffa on_observe on_observe_ctf on_observe_ffa`
