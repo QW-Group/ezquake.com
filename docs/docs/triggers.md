@@ -22,8 +22,8 @@ Apply settings based on map name with a default fallback:
 ```
 alias f_newmap              "apply_map_settings"
 alias apply_map_settings    "if_exists alias map_settings_$mapname map_settings_$mapname map_settings_default"
-alias map_settings_default  "hud_ammo4_show 1; hud_gun8_show 1" // show lg/cells from HUD
-alias map_settings_dm2      "hud_ammo4_show 0; hud_gun8_show 0" // hide lg/cells from HUD
+alias map_settings_default  "hud_ammo4_show 1; hud_gun8_show 1" // show lg/cells in HUD
+alias map_settings_dm2      "hud_ammo4_show 0; hud_gun8_show 0" // hide lg/cells in HUD
 ```
 
 ## f_triggers
