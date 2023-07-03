@@ -10,11 +10,11 @@
     "serve": "vitepress serve docs"
   },
   "devDependencies": {
-    "firebase-tools": "^11.19.0",
-    "vitepress": "^1.0.0-alpha.35",
-    "vue": "^3.2.45"
+    "firebase-tools": "^12.4.2",
+    "vitepress": "^1.0.0-beta.5",
+    "vue": "^3.3.4"
   },
   "dependencies": {
-    "marked": "^4.2.5"
+    "marked": "^5.1.0"
   }
 }
