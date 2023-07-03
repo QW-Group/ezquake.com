@@ -14,7 +14,7 @@ Triggers allows you to execute commands based on events.
 
 ```
 alias on_enter "/say Hello everyone!"
-alias f_newmap "/echo New map loaded: $mapname"
+alias f_demoend "/screenshot"  // take screenshot at end of demo
 ```
 
 Apply settings based on map name with a default fallback:
