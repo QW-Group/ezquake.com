@@ -17,7 +17,7 @@ jobs:
           token: ${{ secrets.PAT }} # required in order to trigger deploy prod workflow
 
       - name: Delete existing help files
-        run: rm data/ezquake/*.json
+        run: rm data/ezquake/help_*.json
 
       - name: Download help files from ezquake-source
         run: wget -i data/ezquake/files_to_download.txt -P data/ezquake
@@ -32,4 +32,4 @@ jobs:
         name: Commit updated help files (if changed)
         with:
           commit_message: Update ezQuake help files.
-          file_pattern: data/ezquake/*.json
+          file_pattern: data/ezquake/help_*.json
