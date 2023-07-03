@@ -3471,6 +3471,84 @@
             "name": "hud_democlock_style"
           },
           {
+            "desc": "Sets horizontal align of scoreclock.",
+            "group-id": "19",
+            "type": "string",
+            "name": "hud_scoreclock_align_x"
+          },
+          {
+            "desc": "Sets vertical align of scoreclock.",
+            "group-id": "19",
+            "type": "string",
+            "name": "hud_scoreclock_align_y"
+          },
+          {
+            "desc": "Controls in what format the scoreclock is displayed. Check the link below for available options. You can also add text, e.g. \"time: %H:%M:%S\"",
+            "remarks": "https://www.man7.org/linux/man-pages/man3/strftime.3.html",
+            "group-id": "19",
+            "type": "string",
+            "name": "hud_scoreclock_format"
+          },
+          {
+            "desc": "Sets frame visibility and style for scoreclock.",
+            "group-id": "19",
+            "type": "float",
+            "name": "hud_scoreclock_frame"
+          },
+          {
+            "desc": "Defines the color of the background of the scoreclock HUD element. See HUD manual for more info.",
+            "group-id": "19",
+            "type": "string",
+            "name": "hud_scoreclock_frame_color"
+          },
+          {
+            "group-id": "19",
+            "type": "float",
+            "name": "hud_scoreclock_item_opacity"
+          },
+          {
+            "desc": "This defines the order of drawing the HUD elements. That means you can change will be drawn on top of other elements. See HUD manual for more info.",
+            "group-id": "19",
+            "type": "integer",
+            "name": "hud_scoreclock_order"
+          },
+          {
+            "desc": "Sets relative positioning for scoreclock.",
+            "group-id": "19",
+            "type": "string",
+            "name": "hud_scoreclock_place"
+          },
+          {
+            "desc": "Sets horizontal position of scoreclock.",
+            "group-id": "19",
+            "type": "float",
+            "name": "hud_scoreclock_pos_x"
+          },
+          {
+            "desc": "Sets vertical position of scoreclock.",
+            "group-id": "19",
+            "type": "float",
+            "name": "hud_scoreclock_pos_y"
+          },
+          {
+            "desc": "Scale of the scoreclock HUD element.",
+            "group-id": "19",
+            "type": "float",
+            "name": "hud_scoreclock_scale"
+          },
+          {
+            "desc": "Toggles whether the scoreclock is displayed. It is only displayed when the scoreboard is open.",
+            "group-id": "19",
+            "type": "boolean",
+            "name": "hud_scoreclock_show"
+          },
+          {
+            "desc": "Toggles whether the scoreclock uses charset chars or TTF chars",
+            "group-id": "19",
+            "type": "boolean",
+            "name": "hud_scoreclock_proportional"
+          },
+          {
             "desc": "Changes how large numbers are treated in Head Up Display.",
             "group-id": "19",
             "remarks": "Applies to all HUD elements with 'digits' property.",
@@ -11221,10 +11299,17 @@
           },
           {
             "default": "0",
-            "desc": "This variable sets the maximum limit for frames-per-second. Please see vid_vsync, cl_independentphysics, and cl_physfps.",
+            "desc": "This variable sets the maximum limit for frames-per-second while in-game. Please see cl_maxfps_menu, vid_vsync, cl_independentphysics, and cl_physfps.",
             "group-id": "8",
             "type": "float",
             "name": "cl_maxfps"
+          },
+          {
+            "default": "0",
+            "desc": "This variable sets the maximum limit for frames-per-second while disconnected, has a minimum of 30, set lower to use display frequency.",
+            "group-id": "8",
+            "type": "float",
+            "name": "cl_maxfps_menu"
           },
           {
             "default": "1",
@@ -12377,7 +12462,7 @@
             "name": "gl_shaftlight"
           },
           {
-            "default": "1",
+            "default": "2",
             "desc": "Controls dynamic lighting (muzzle-flash, quad & rocket glow, etc) on world surfaces.",
             "group-id": "15",
             "type": "enum",
@@ -12447,11 +12532,24 @@
             "type": "float",
             "values": [
               {
-                "description": "Value in range 0-25.",
+                "description": "Value in range 0 to 2.",
                 "name": "*"
               }
             ],
             "name": "gl_brush_polygonoffset"
+          },
+          {
+            "default": "0.05",
+            "desc": "Set the factor for gl_brush_polygonoffset. Negative values offset the brushes towards the player.",
+            "group-id": "35",
+            "type": "float",
+            "values": [
+              {
+                "description": "Value in range -1 to 1.",
+                "name": "*"
+              }
+            ],
+            "name": "gl_brush_polygonoffset_factor"
           },
           {
             "default": "0",
@@ -12696,9 +12794,9 @@
           },
           {
             "default": "0",
-            "desc": "Controls outlining of models and map.",
+            "desc": "Controls outlining of models and map. Disallowed in qcon ruleset.",
             "group-id": "35",
-            "remarks": "Outlining of the world is only valid when cheats are enabled.",
+            "remarks": "See /r_fx_geometry for edge outlining of the map.",
             "type": "enum",
             "values": [
               {
@@ -12710,7 +12808,7 @@
                 "name": "1"
               },
               {
-                "description": "Outline world",
+                "description": "Outline world (used only for map development)",
                 "name": "2"
               },
               {
@@ -12820,9 +12918,9 @@
           },
           {
             "default": "0",
-            "desc": "Outlines the world based on surface normals.",
+            "desc": "Outlines the world based on surface normals. Disallowed in qcon ruleset.",
             "group-id": "35",
-            "remarks": "Requires vid_framebuffer 1|2 and Modern OpenGL (vid_renderer 1).",
+            "remarks": "Requires vid_framebuffer 1|2 and Modern OpenGL (vid_renderer 1). See /gl_outline for model outline",
             "type": "boolean",
             "name": "r_fx_geometry"
           },
@@ -13348,7 +13446,7 @@
             "name": "gl_cshiftpercent"
           },
           {
-            "default": "1",
+            "default": "0",
             "desc": "Toggles between OpenGL and Hardware palette changing.",
             "group-id": "39",
             "remarks": "1 can be slow on WinNT/2K.",
@@ -14235,6 +14333,13 @@
             "group-id": "40",
             "type": "integer",
             "name": "r_tracker_positive_enemy_suicide"
+          },
+          {
+            "default": "0",
+            "desc": "If enabled frag tracker draws enemy vs enemy kills using color value of r_tracker_color_good variable.",
+            "group-id": "40",
+            "type": "integer",
+            "name": "r_tracker_positive_enemy_vs_enemy"
           },
           {
             "default": "1",
@@ -15424,7 +15529,7 @@
         "url": "/docs/settings/graphics/#texture-settings",
         "items": [
           {
-            "default": "1",
+            "default": "16",
             "desc": "Anisotropic filtering. Improves texture detail on angled surfaces.",
             "group-id": "50",
             "remarks": "Depends on your Graphics card capabilities and settings. Make sure you have set your graphic card's Anisotropic Filtering setting to \"Application controlled\".",
@@ -15639,7 +15744,7 @@
             "default": "0",
             "desc": "Toggles between textures and flat colors based on the textures (looks like gl_max_size 1).\nFor custom colors, look for r_drawflat.",
             "group-id": "50",
-            "remarks": "Can not be changed during a match.",
+            "remarks": "The effect varies with picmip/max_size.\nCan not be changed during a match.",
             "type": "boolean",
             "values": [
               {
@@ -15647,7 +15752,7 @@
                 "name": "false"
               },
               {
-                "description": "Use flat colors averaged from the world textures.",
+                "description": "Use flat colors based on the world textures.",
                 "name": "true"
               }
             ],
@@ -16561,7 +16666,7 @@
             "name": "vid_minimize_on_focus_loss"
           },
           {
-            "default": "0",
+            "default": "1",
             "desc": "Selects which rendering mode to use.",
             "group-id": "52",
             "remarks": "(variable only available if multiple renderers available)",
@@ -16586,7 +16691,7 @@
             "name": "vid_showextensions"
           },
           {
-            "default": "0",
+            "default": "1",
             "desc": "Controls whether to adjust gamma at the display level, or as a color correction rendering effect.",
             "group-id": "52",
             "type": "boolean",
