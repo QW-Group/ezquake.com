@@ -2,8 +2,8 @@
 ---
 
 <script setup>
-import fTriggers from './../../data/ezquake/f_triggers.json';
-import onTriggers from './../../data/ezquake/on_triggers.json';
+import fTriggers from '../../data/f_triggers.json';
+import onTriggers from './../../data/on_triggers.json';
 </script>
 
 # Triggers
