@@ -1,4 +1,7 @@
-import { defineConfig } from "vitepress";
+import { createContentLoader, defineConfig } from "vitepress";
+import { SitemapStream } from "sitemap";
+import { createWriteStream } from "node:fs";
+import { resolve } from "node:path";
 
 import menus from "./menus";
 import sidebars from "./sidebars";
@@ -34,5 +37,22 @@ export default defineConfig({
       "/info/": sidebars.info,
       "/docs": sidebars.documentation,
     },
+  },
+  buildEnd: async ({ outDir }) => {
+    const sitemap = new SitemapStream({ hostname: "https://ezquake.com/" });
+    const pages = await createContentLoader("**/*.md").load();
+    const writeStream = createWriteStream(resolve(outDir, "sitemap.xml"));
+
+    sitemap.pipe(writeStream);
+    pages.forEach((page) =>
+      sitemap.write(
+        page.url
+          // Strip `index.html` from URL
+          .replace(/index.html$/g, "")
+      )
+    );
+    sitemap.end();
+
+    await new Promise((r) => writeStream.on("finish", r));
   },
 });

@@ -15,6 +15,7 @@
     "vue": "^3.3.4"
   },
   "dependencies": {
-    "marked": "^5.1.0"
+    "marked": "^5.1.0",
+    "sitemap": "^7.1.1"
   }
 }
