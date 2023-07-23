@@ -11,8 +11,6 @@ export default {
   }
 }
 
-const is
-
 </script>
 
 <template>
