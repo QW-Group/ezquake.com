@@ -11,6 +11,8 @@ export default {
   }
 }
 
+const is
+
 </script>
 
 <template>
@@ -28,7 +30,7 @@ export default {
         <td valign="top">{{ release.name }}</td>
         <td valign="top">{{ release.created_at.substring(0, "2020-01-01".length) }}</td>
         <td valign="top">
-            <span v-for="asset in release.assets.filter(f => f.name.endsWith('.zip'))">
+            <span v-for="asset in release.assets.filter(f => f.browser_download_url.includes('releases/download'))">
               <a :href="asset.browser_download_url">{{ asset.name }}</a> ({{ Math.round(asset.size / 1024) }} kb)<br />
             </span>
         </td>
