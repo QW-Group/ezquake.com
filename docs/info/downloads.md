@@ -30,7 +30,7 @@ See [all releases](https://github.com/QW-Group/ezquake-source/releases) on GitHu
 
 ## Nightly builds
 
-A history of nightly builds for Windows is available at [builds.quakeworld.nu](https://builds.quakeworld.nu/ezquake/snapshots/x64/rls-all/).
+A history of nightly builds for Windows is available at [builds.quakeworld.nu](https://builds.quakeworld.nu/ezquake/snapshots/).
 
 ## Game Media
 
