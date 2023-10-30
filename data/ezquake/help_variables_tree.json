@@ -1023,6 +1023,23 @@
         "url": "/docs/settings/miscellaneous/#system-settings",
         "items": [
           {
+            "default": "1",
+            "desc": "Checks if the the client is outdated. If a new version is found, this will be presented above the in-game menu. The version check performs a HTTP request to GitHub once per launch without introducing any application start delay. Any error querying the latest version assumes the current client is the latest.",
+            "group-id": "48",
+            "type": "boolean",
+            "values": [
+              {
+                "description": "Deny update check.",
+                "name": "false"
+              },
+              {
+                "description": "Allow update check.",
+                "name": "true"
+              }
+            ],
+            "name": "sys_update_check"
+          },
+          {
             "default": "0",
             "desc": "Changes where demos, screenshots and logs are saved, how variables demo_dir, sshot_dir and log_dir are treated.",
             "group-id": "48",
@@ -12021,18 +12038,32 @@
             "name": "r_lerpmuzzlehack"
           },
           {
-            "default": "73",
-            "desc": "Determines the (palletized) color of the blood particles emitted when hitting entities with weapons other than the lightning gun.",
-            "group-id": "8",
-            "type": "integer",
-            "name": "r_sgbloodColor"
-          },
-          {
             "default": "225",
             "desc": "Determines the (palletized) color of the blood particles emitted when hitting entities with the lightning gun.",
             "group-id": "8",
             "type": "integer",
             "name": "r_lgbloodColor"
+          },
+          {
+            "default": "225",
+            "desc": "Determines the (palletized) color of the blood particles emitted when hitting entities with the rocket launcher. Requires the rocket explosion to be small blood (cl_explosiontype 3. Default value is 225.",
+            "group-id": "8",
+            "type": "integer",
+            "name": "r_rlbloodColor_small"
+          },
+          {
+            "default": "73",
+            "desc": "Determines the (palletized) color of the blood particles emitted when hitting entities with the rocket launcher. Requires the rocket explosion to be big blood (cl_explosiontype 4. Default value is 73.",
+            "group-id": "8",
+            "type": "integer",
+            "name": "r_rlbloodColor_big"
+          },
+          {
+            "default": "73",
+            "desc": "Determines the (palletized) color of the blood particles emitted when hitting entities with weapons other than the lightning gun.",
+            "group-id": "8",
+            "type": "integer",
+            "name": "r_sgbloodColor"
           },
           {
             "default": "2",
@@ -12803,7 +12834,7 @@
             "default": "0",
             "desc": "Controls outlining of models and map. Disallowed in qcon ruleset.",
             "group-id": "35",
-            "remarks": "See /r_fx_geometry for edge outlining of the map.",
+            "remarks": "World outlines require vid_framebuffer 1|2 and Modern OpenGL (vid_renderer 1). With vid_renderer 0, ruleset default and sv_cheats 1, gl_outline 2 draws outlines of every surface that is rendered.",
             "type": "enum",
             "values": [
               {
@@ -12811,11 +12842,11 @@
                 "name": "0"
               },
               {
-                "description": "Outline models to create rotoscope effect",
+                "description": "Outline models",
                 "name": "1"
               },
               {
-                "description": "Outline world (used only for map development)",
+                "description": "Outline world",
                 "name": "2"
               },
               {
@@ -12824,6 +12855,75 @@
               }
             ],
             "name": "gl_outline"
+          },
+          {
+            "default": "0 0 0",
+            "desc": "Determines the color of world outlines.",
+            "group-id": "35",
+            "type": "string",
+            "name": "gl_outline_color_world"
+          },
+          {
+            "default": "0 0 0",
+            "desc": "Determines the color of model outlines.",
+            "remarks": "Requires vid_renderer 1",
+            "group-id": "35",
+            "type": "string",
+            "name": "gl_outline_color_model"
+          },
+          {
+            "default": "1",
+            "desc": "Determines the scale of model outlines. Allows values 0 to 1 for rulesets smackdown and qcon, and 0 to 5 for other rulesets.",
+            "remarks": "Requires vid_renderer 1",
+            "group-id": "35",
+            "type": "float",
+            "name": "gl_outline_scale_model"
+          },
+          {
+            "default": "4",
+            "desc": "Threshold for finding edges with depth values. Higher value means vanishing lines at close range. Lower value means false positives at longer range.",
+            "group-id": "35",
+            "type": "float",
+            "name": "gl_outline_world_depth_threshold"
+          },
+          {
+            "default": "0",
+            "desc": "Use the top and bottom color for drawing player outlines",
+            "remarks": "Requires vid_renderer 1",
+            "group-id": "35",
+            "type": "boolean",
+            "name": "gl_outline_use_player_color"
+          },
+          {
+            "default": "",
+            "desc": "Determines the outline color of friendly players. Set to \"\" to use the value of gl_outline_color_model.",
+            "remarks": "Requires vid_renderer 1",
+            "group-id": "35",
+            "type": "string",
+            "name": "gl_outline_color_team"
+          },
+          {
+            "default": "",
+            "desc": "Determines the outline color of enemy players. Set to \"\" to use the value of gl_outline_color_model.",
+            "remarks": "Requires vid_renderer 1",
+            "group-id": "35",
+            "type": "string",
+            "name": "gl_outline_color_enemy"
+          },
+          {
+            "default": "0",
+            "desc": "See players through walls (demo/qtv only). Is affected by gl_outline_* values like color, scale, etc.",
+            "remarks": "Requires vid_renderer 1",
+            "group-id": "35",
+            "type": "boolean",
+            "name": "gl_spec_xray"
+          },
+          {
+            "default": "512",
+            "desc": "Distance from which you can see the players through walls, see gl_spec_xray",
+            "group-id": "35",
+            "type": "float",
+            "name": "gl_spec_xray_distance"
           },
           {
             "default": "1",
@@ -12922,14 +13022,6 @@
             "remarks": "See also: r_nearclip.",
             "type": "float",
             "name": "r_farclip"
-          },
-          {
-            "default": "0",
-            "desc": "Outlines the world based on surface normals. Disallowed in qcon ruleset.",
-            "group-id": "35",
-            "remarks": "Requires vid_framebuffer 1|2 and Modern OpenGL (vid_renderer 1). See /gl_outline for model outline",
-            "type": "boolean",
-            "name": "r_fx_geometry"
           },
           {
             "default": "0",
@@ -15741,6 +15833,13 @@
             "name": "gl_scaleskytextures"
           },
           {
+            "default": "0",
+            "desc": "Applies picmip/max_size/miptexlevel to alpha masked textures (fence).",
+            "group-id": "50",
+            "type": "boolean",
+            "name": "gl_scaleAlphaTextures"
+          },
+          {
             "default": "64",
             "desc": "This variable sets the division value for the sky brushes.\nThe higher the value the better the performance, but the smoothness of the sky suffers.",
             "group-id": "50",
@@ -16642,7 +16741,7 @@
             "name": "vid_hwgamma_fps"
           },
           {
-            "default": "2",
+            "default": "0",
             "group-id": "52",
             "type": "enum",
             "values": [
