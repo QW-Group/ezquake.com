@@ -5,12 +5,12 @@ import VariableListItem from './VariableListItem.vue';
 
 export default {
   components: { VariableListItem },
+  methods: { slugify },
   props: {
     groupName: String,
   },
   data() {
     return {
-      slugify,
       variables
     }
   }
@@ -21,7 +21,10 @@ export default {
   <div v-for="group in variables[groupName].items">
     <div v-if="group.items.length">
 
-      <h2 :id=group.slug>{{ group.title }}</h2>
+      <h2 :id=group.slug>
+        {{ group.title }}
+        <a class="header-anchor" :href="`#${group.slug}`"></a>
+      </h2>
 
       <table style="font-size: 0.85em">
         <tbody>

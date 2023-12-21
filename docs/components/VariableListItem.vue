@@ -1,6 +1,9 @@
 <script>
 
+import {slugify} from "./util";
+
 export default {
+  methods: {slugify},
   props: {
     item: Object,
   }
@@ -8,7 +11,10 @@ export default {
 </script>
 
 <template>
-  <strong>{{ item.name }}</strong> <code v-if="item.type">{{ item.type }}</code> <code v-if="item.default" i>default: {{ item.default }}</code>
+  <h3 class="ezq-variable-heading">
+    <span class="ezq-select-all">{{ item.name }}</span>
+    <a class="header-anchor" :href="`#${slugify(item.name)}`"></a>
+  </h3> <code v-if="item.type">{{ item.type }}</code> <code v-if="item.default" i>default: {{ item.default }}</code>
 
   <div v-if="item.desc">{{ item.desc }}</div>
 

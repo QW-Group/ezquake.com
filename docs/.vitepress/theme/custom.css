@@ -16,3 +16,13 @@ summary {
 .vp-doc h4 + p {
     margin-top: .25em;
 }
+
+.ezq-variable-heading {
+    display: inline-block;
+    margin-top: 0 !important;
+    font-size: inherit !important;
+}
+
+.ezq-select-all {
+    user-select: all;
+}
