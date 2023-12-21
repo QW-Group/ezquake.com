@@ -4,18 +4,19 @@
   "description": "ezQuake website",
   "repository": "git@github.com:QW-Group/ezquake.com.git",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs"
   },
   "devDependencies": {
-    "firebase-tools": "^12.4.2",
-    "vitepress": "^1.0.0-beta.5",
-    "vue": "^3.3.4"
+    "firebase-tools": "^13.0.2",
+    "vitepress": "^1.0.0-rc.32",
+    "vue": "^3.3.13"
   },
   "dependencies": {
-    "marked": "^5.1.0",
+    "marked": "^11.1.0",
     "sitemap": "^7.1.1"
   }
 }
