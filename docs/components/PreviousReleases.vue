@@ -4,9 +4,10 @@ export default {
   async setup() {
     const releasesResponse = await fetch("https://api.github.com/repos/qw-group/ezquake-source/releases");
     const releases = await releasesResponse.json()
+    const prevReleaseLimit = 5;
 
     return {
-      previousReleases: releases.slice(1) // ignore last 2, special case due to new versioning system, should be 1.
+      previousReleases: releases.slice(1, 1+prevReleaseLimit)
     }
   }
 }
