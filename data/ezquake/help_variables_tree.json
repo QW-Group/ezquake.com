@@ -108,6 +108,12 @@
             "name": "file_browser_sort_archives"
           },
           {
+            "default": "1",
+            "group-id": "0",
+            "system-generated": true,
+            "name": "fs_savegame_home"
+          },
+          {
             "default": "0",
             "group-id": "0",
             "system-generated": true,
@@ -339,12 +345,6 @@
             "name": "registered"
           },
           {
-            "default": "8",
-            "group-id": "0",
-            "system-generated": true,
-            "name": "scr_centerspeed"
-          },
-          {
             "default": "0",
             "group-id": "0",
             "system-generated": true,
@@ -409,6 +409,12 @@
             "group-id": "0",
             "system-generated": true,
             "name": "sys_command_line"
+          },
+          {
+            "default": "1",
+            "group-id": "0",
+            "system-generated": true,
+            "name": "vid_reload_auto"
           }
         ]
       },
@@ -847,18 +853,9 @@
           },
           {
             "default": "1",
+            "desc": "Centers the menu vertically (has no effect if you're playing in 320x200 mode, same applies to scr_centersbar).",
             "group-id": "17",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Off.",
-                "name": "false"
-              },
-              {
-                "description": "Centers the menu vertically (has no effect if you're playing in 320x200 mode, same applies to scr_centersbar).",
-                "name": "true"
-              }
-            ],
             "name": "scr_centerMenu"
           },
           {
@@ -869,7 +866,7 @@
             "name": "scr_cursor_alpha"
           },
           {
-            "default": "10",
+            "default": "0",
             "desc": "Offset of the cursor image used in menus and HUD editor.",
             "group-id": "17",
             "type": "integer",
@@ -957,7 +954,7 @@
                 "name": "false"
               },
               {
-                "description": "Enable the uknown command messages.",
+                "description": "Enable the unknown command messages.",
                 "name": "true"
               }
             ],
@@ -1022,23 +1019,6 @@
         "slug": "system-settings",
         "url": "/docs/settings/miscellaneous/#system-settings",
         "items": [
-          {
-            "default": "1",
-            "desc": "Checks if the the client is outdated. If a new version is found, this will be presented above the in-game menu. The version check performs a HTTP request to GitHub once per launch without introducing any application start delay. Any error querying the latest version assumes the current client is the latest.",
-            "group-id": "48",
-            "type": "boolean",
-            "values": [
-              {
-                "description": "Deny update check.",
-                "name": "false"
-              },
-              {
-                "description": "Allow update check.",
-                "name": "true"
-              }
-            ],
-            "name": "sys_update_check"
-          },
           {
             "default": "0",
             "desc": "Changes where demos, screenshots and logs are saved, how variables demo_dir, sshot_dir and log_dir are treated.",
@@ -1187,6 +1167,23 @@
               }
             ],
             "name": "sys_inactivesound"
+          },
+          {
+            "default": "1",
+            "desc": "Checks if the the client is outdated. If a new version is found, this will be presented above the in-game menu. The version check performs a HTTP request to GitHub once per launch without introducing any application start delay. Any error querying the latest version assumes the current client is the latest.",
+            "group-id": "48",
+            "type": "boolean",
+            "values": [
+              {
+                "description": "Deny update check.",
+                "name": "false"
+              },
+              {
+                "description": "Allow update check.",
+                "name": "true"
+              }
+            ],
+            "name": "sys_update_check"
           },
           {
             "default": "0",
@@ -1376,7 +1373,7 @@
             "default": "0",
             "desc": "Triggers and re/msg trigger restrictions for spectator and demoplay modes.",
             "group-id": "3",
-            "remarks": "FuhQuake always behave as cl_restrictions 1. QW262 by default it have cl_restrictions 1.",
+            "remarks": "FuhQuake always behaves as cl_restrictions 1. QW262 has cl_restrictions 1 by default.",
             "type": "boolean",
             "values": [
               {
@@ -2031,16 +2028,6 @@
             "desc": "When you type a cvar name into console (like 'gl_gamma' or 'r_rocketlight'), the client will tell you the default value of the cvar.",
             "group-id": "5",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Off.",
-                "name": "false"
-              },
-              {
-                "description": "On.",
-                "name": "true"
-              }
-            ],
             "name": "cvar_viewdefault"
           },
           {
@@ -2205,22 +2192,6 @@
             "name": "gl_consolefont"
           },
           {
-            "desc": "Smooths out the font (which = good). But in some cases the font wasn't designed to be smoothed (sometimes the case of custom console fonts etc).",
-            "group-id": "5",
-            "type": "boolean",
-            "values": [
-              {
-                "description": "Off.",
-                "name": "false"
-              },
-              {
-                "description": "On.",
-                "name": "true"
-              }
-            ],
-            "name": "gl_smoothfont"
-          },
-          {
             "default": "",
             "desc": "The logging dir.",
             "group-id": "5",
@@ -2229,18 +2200,9 @@
           },
           {
             "default": "1",
+            "description": "Converts all non-printable characters to printable characters in your log (ie colored text, Ocrana LEDs) to make it more readable.",
             "group-id": "5",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Off.",
-                "name": "false"
-              },
-              {
-                "description": "Will convert all non printable characters to printable characters in your log. This makes your log readable because all the weird ascii characters that usually occur because of different colored text in the client (and because of weird symbols - ocrana led's etc) are converted into printable characters.",
-                "name": "true"
-              }
-            ],
             "name": "log_readable"
           },
           {
@@ -2256,6 +2218,13 @@
             "group-id": "5",
             "type": "boolean",
             "name": "scr_autoid_proportional"
+          },
+          {
+            "default": "8",
+            "desc": "This variable controls how fast the text is displayed at the end of the single player episodes.",
+            "group-id": "5",
+            "type": "float",
+            "name": "scr_centerspeed"
           },
           {
             "default": "0.8",
@@ -2323,13 +2292,6 @@
             "group-id": "5",
             "type": "boolean",
             "name": "scr_damage_proportional"
-          },
-          {
-            "default": "8",
-            "desc": "This variable controls how fast the text is displayed at the end of the single player episodes.",
-            "group-id": "5",
-            "type": "float",
-            "name": "scr_printspeed"
           },
           {
             "default": "0",
@@ -2812,6 +2774,12 @@
             "name": "hud_armor_frame_color"
           },
           {
+            "desc": "Hide armor number if 0.",
+            "group-id": "19",
+            "type": "float",
+            "name": "hud_armor_hidezero"
+          },
+          {
             "group-id": "19",
             "type": "float",
             "name": "hud_armor_item_opacity"
@@ -2856,12 +2824,6 @@
             "group-id": "19",
             "type": "float",
             "name": "hud_armor_show"
-          },
-          {
-            "desc": "Hide armor number if 0.",
-            "group-id": "19",
-            "type": "float",
-            "name": "hud_armor_hidezero"
           },
           {
             "desc": "Switches graphical style of armor level.",
@@ -3488,84 +3450,6 @@
             "name": "hud_democlock_style"
           },
           {
-            "desc": "Sets horizontal align of scoreclock.",
-            "group-id": "19",
-            "type": "string",
-            "name": "hud_scoreclock_align_x"
-          },
-          {
-            "desc": "Sets vertical align of scoreclock.",
-            "group-id": "19",
-            "type": "string",
-            "name": "hud_scoreclock_align_y"
-          },
-          {
-            "desc": "Controls in what format the scoreclock is displayed. Check the link below for available options. You can also add text, e.g. \"time: %H:%M:%S\"",
-            "remarks": "https://www.man7.org/linux/man-pages/man3/strftime.3.html",
-            "group-id": "19",
-            "type": "string",
-            "name": "hud_scoreclock_format"
-          },
-          {
-            "desc": "Sets frame visibility and style for scoreclock.",
-            "group-id": "19",
-            "type": "float",
-            "name": "hud_scoreclock_frame"
-          },
-          {
-            "desc": "Defines the color of the background of the scoreclock HUD element. See HUD manual for more info.",
-            "group-id": "19",
-            "type": "string",
-            "name": "hud_scoreclock_frame_color"
-          },
-          {
-            "group-id": "19",
-            "type": "float",
-            "name": "hud_scoreclock_item_opacity"
-          },
-          {
-            "desc": "This defines the order of drawing the HUD elements. That means you can change will be drawn on top of other elements. See HUD manual for more info.",
-            "group-id": "19",
-            "type": "integer",
-            "name": "hud_scoreclock_order"
-          },
-          {
-            "desc": "Sets relative positioning for scoreclock.",
-            "group-id": "19",
-            "type": "string",
-            "name": "hud_scoreclock_place"
-          },
-          {
-            "desc": "Sets horizontal position of scoreclock.",
-            "group-id": "19",
-            "type": "float",
-            "name": "hud_scoreclock_pos_x"
-          },
-          {
-            "desc": "Sets vertical position of scoreclock.",
-            "group-id": "19",
-            "type": "float",
-            "name": "hud_scoreclock_pos_y"
-          },
-          {
-            "desc": "Scale of the scoreclock HUD element.",
-            "group-id": "19",
-            "type": "float",
-            "name": "hud_scoreclock_scale"
-          },
-          {
-            "desc": "Toggles whether the scoreclock is displayed. It is only displayed when the scoreboard is open.",
-            "group-id": "19",
-            "type": "boolean",
-            "name": "hud_scoreclock_show"
-          },
-          {
-            "desc": "Toggles whether the scoreclock uses charset chars or TTF chars",
-            "group-id": "19",
-            "type": "boolean",
-            "name": "hud_scoreclock_proportional"
-          },
-          {
             "desc": "Changes how large numbers are treated in Head Up Display.",
             "group-id": "19",
             "remarks": "Applies to all HUD elements with 'digits' property.",
@@ -3924,15 +3808,23 @@
             "desc": "Toggles alignment of players nick and team name in frags HUD element.",
             "group-id": "19",
             "remarks": "Use 'frags shownames 1' and/or 'frags showteams 1' to show names and team names of players.",
-            "type": "boolean",
+            "type": "integer",
             "values": [
               {
                 "description": "Rows aligned to the left side, names and team tags are on the right side of frag counts.",
-                "name": "false"
+                "name": "0"
               },
               {
                 "description": "Rows aligned to the right side, names and team tags are on the left side of frag counts.",
-                "name": "true"
+                "name": "1"
+              },
+              {
+                "description": "Rows aligned toward the inside of each column.",
+                "name": "2"
+              },
+              {
+                "description": "Rows aligned toward the outside of each column.",
+                "name": "3"
               }
             ],
             "name": "hud_frags_fliptext"
@@ -4102,7 +3994,7 @@
                 "name": "2"
               },
               {
-                "description": "Similar to 0.",
+                "description": "No pointer or indicator.",
                 "name": "3"
               },
               {
@@ -4137,6 +4029,20 @@
           {
             "desc": "Switches vertical rendering of frags bar.",
             "group-id": "19",
+            "values": [
+              {
+                "description": "No vertical rendering.",
+                "name": "0"
+              },
+              {
+                "description": "Legacy vertical rendering.",
+                "name": "1"
+              },
+              {
+                "description": "New vertical rendering: split columns evenly based on number of players.",
+                "name": "2"
+              }
+            ],
             "type": "float",
             "name": "hud_frags_vertical"
           },
@@ -5216,6 +5122,12 @@
             "name": "hud_gun2_frame_color"
           },
           {
+            "desc": "Hide the frame unless you have the weapon.",
+            "group-id": "19",
+            "type": "integer",
+            "name": "hud_gun2_frame_hide"
+          },
+          {
             "group-id": "19",
             "type": "float",
             "name": "hud_gun2_item_opacity"
@@ -5323,6 +5235,12 @@
             "group-id": "19",
             "type": "string",
             "name": "hud_gun3_frame_color"
+          },
+          {
+            "desc": "Hide the frame unless you have the weapon.",
+            "group-id": "19",
+            "type": "integer",
+            "name": "hud_gun3_frame_hide"
           },
           {
             "group-id": "19",
@@ -5434,6 +5352,12 @@
             "name": "hud_gun4_frame_color"
           },
           {
+            "desc": "Hide the frame unless you have the weapon.",
+            "group-id": "19",
+            "type": "integer",
+            "name": "hud_gun4_frame_hide"
+          },
+          {
             "group-id": "19",
             "type": "float",
             "name": "hud_gun4_item_opacity"
@@ -5541,6 +5465,12 @@
             "group-id": "19",
             "type": "string",
             "name": "hud_gun5_frame_color"
+          },
+          {
+            "desc": "Hide the frame unless you have the weapon.",
+            "group-id": "19",
+            "type": "integer",
+            "name": "hud_gun5_frame_hide"
           },
           {
             "group-id": "19",
@@ -5652,6 +5582,12 @@
             "name": "hud_gun6_frame_color"
           },
           {
+            "desc": "Hide the frame unless you have the weapon.",
+            "group-id": "19",
+            "type": "integer",
+            "name": "hud_gun6_frame_hide"
+          },
+          {
             "group-id": "19",
             "type": "float",
             "name": "hud_gun6_item_opacity"
@@ -5761,6 +5697,12 @@
             "name": "hud_gun7_frame_color"
           },
           {
+            "desc": "Hide the frame unless you have the weapon.",
+            "group-id": "19",
+            "type": "integer",
+            "name": "hud_gun7_frame_hide"
+          },
+          {
             "group-id": "19",
             "type": "float",
             "name": "hud_gun7_item_opacity"
@@ -5868,6 +5810,12 @@
             "group-id": "19",
             "type": "string",
             "name": "hud_gun8_frame_color"
+          },
+          {
+            "desc": "Hide the frame unless you have the weapon.",
+            "group-id": "19",
+            "type": "integer",
+            "name": "hud_gun8_frame_hide"
           },
           {
             "group-id": "19",
@@ -8448,6 +8396,84 @@
             "name": "hud_score_team_style"
           },
           {
+            "desc": "Sets horizontal align of scoreclock.",
+            "group-id": "19",
+            "type": "string",
+            "name": "hud_scoreclock_align_x"
+          },
+          {
+            "desc": "Sets vertical align of scoreclock.",
+            "group-id": "19",
+            "type": "string",
+            "name": "hud_scoreclock_align_y"
+          },
+          {
+            "desc": "Controls in what format the scoreclock is displayed. Check the link below for available options. You can also add text, e.g. \"time: %H:%M:%S\"",
+            "group-id": "19",
+            "remarks": "https://www.man7.org/linux/man-pages/man3/strftime.3.html",
+            "type": "string",
+            "name": "hud_scoreclock_format"
+          },
+          {
+            "desc": "Sets frame visibility and style for scoreclock.",
+            "group-id": "19",
+            "type": "float",
+            "name": "hud_scoreclock_frame"
+          },
+          {
+            "desc": "Defines the color of the background of the scoreclock HUD element. See HUD manual for more info.",
+            "group-id": "19",
+            "type": "string",
+            "name": "hud_scoreclock_frame_color"
+          },
+          {
+            "group-id": "19",
+            "type": "float",
+            "name": "hud_scoreclock_item_opacity"
+          },
+          {
+            "desc": "This defines the order of drawing the HUD elements. That means you can change will be drawn on top of other elements. See HUD manual for more info.",
+            "group-id": "19",
+            "type": "integer",
+            "name": "hud_scoreclock_order"
+          },
+          {
+            "desc": "Sets relative positioning for scoreclock.",
+            "group-id": "19",
+            "type": "string",
+            "name": "hud_scoreclock_place"
+          },
+          {
+            "desc": "Sets horizontal position of scoreclock.",
+            "group-id": "19",
+            "type": "float",
+            "name": "hud_scoreclock_pos_x"
+          },
+          {
+            "desc": "Sets vertical position of scoreclock.",
+            "group-id": "19",
+            "type": "float",
+            "name": "hud_scoreclock_pos_y"
+          },
+          {
+            "desc": "Toggles whether the scoreclock uses charset chars or TTF chars",
+            "group-id": "19",
+            "type": "boolean",
+            "name": "hud_scoreclock_proportional"
+          },
+          {
+            "desc": "Scale of the scoreclock HUD element.",
+            "group-id": "19",
+            "type": "float",
+            "name": "hud_scoreclock_scale"
+          },
+          {
+            "desc": "Toggles whether the scoreclock is displayed. It is only displayed when the scoreboard is open.",
+            "group-id": "19",
+            "type": "boolean",
+            "name": "hud_scoreclock_show"
+          },
+          {
             "desc": "Sets horizontal align of sigil 1 icon (rune)",
             "group-id": "19",
             "type": "string",
@@ -8806,35 +8832,35 @@
           {
             "desc": "Sets the color of the speed2 hud item when the speed is above the wrap speed.",
             "group-id": "19",
-            "remarks": "Use the quake pallete colors 0-255.\nSee hud_radar2_wrapspeed also.",
+            "remarks": "Uses quake palette colors (0-255).\nSee hud_radar2_wrapspeed also.",
             "type": "integer",
             "name": "hud_speed2_color_fast"
           },
           {
             "desc": "Sets the color of the speed2 hud item when the speed is above 2x wrap speed.",
             "group-id": "19",
-            "remarks": "Use the quake pallete colors 0-255.\nSee hud_radar2_wrapspeed also.",
+            "remarks": "Uses quake palette colors (0-255).\nSee hud_radar2_wrapspeed also.",
             "type": "integer",
             "name": "hud_speed2_color_fastest"
           },
           {
             "desc": "Sets the color of the speed2 hud item when the speed is above 3x wrap speed.",
             "group-id": "19",
-            "remarks": "Use the quake pallete colors 0-255.\nSee hud_radar2_wrapspeed also.",
+            "remarks": "Uses quake palette colors (0-255).\nSee hud_radar2_wrapspeed also.",
             "type": "integer",
             "name": "hud_speed2_color_insane"
           },
           {
             "desc": "Sets the color of the speed2 hud item when the speed is between 1 and the wrap speed.",
             "group-id": "19",
-            "remarks": "Use the quake pallete colors 0-255.\nSee hud_radar2_wrapspeed also.",
+            "remarks": "Uses quake palette colors (0-255).\nSee hud_radar2_wrapspeed also.",
             "type": "integer",
             "name": "hud_speed2_color_normal"
           },
           {
             "desc": "Sets the color of the speed2 hud item when the speed is 0. Default is green.",
             "group-id": "19",
-            "remarks": "Use the quake pallete colors 0-255.",
+            "remarks": "Uses quake palette colors (0-255).",
             "type": "integer",
             "name": "hud_speed2_color_stopped"
           },
@@ -8986,35 +9012,35 @@
           {
             "desc": "Sets the color of the speed hud item when the player is moving at a \"fast\" speed (above 500).",
             "group-id": "19",
-            "remarks": "Use the quake palette colors to set this (0-255).",
+            "remarks": "Uses quake palette colors (0-255).",
             "type": "integer",
             "name": "hud_speed_color_fast"
           },
           {
             "desc": "Sets the color of the speed hud item when the player is moving at a really \"fast\" speed (above 1000).",
             "group-id": "19",
-            "remarks": "Use the quake pallete colors to set this (0-255).",
+            "remarks": "Uses quake palette colors (0-255).",
             "type": "integer",
             "name": "hud_speed_color_fastest"
           },
           {
             "desc": "Sets the color of the speed hud item when the player is moving at a crazy speed (above 1500... I think).",
             "group-id": "19",
-            "remarks": "Use the quake pallete colors to set this (0-255).",
+            "remarks": "Uses quake palette colors (0-255).",
             "type": "integer",
             "name": "hud_speed_color_insane"
           },
           {
             "desc": "Sets the color of the speed hud item when the player is moving at a \"normal\" speed (below 500).",
             "group-id": "19",
-            "remarks": "Use the quake pallete colors to set this (0-255).",
+            "remarks": "Uses quake palette colors (0-255).",
             "type": "integer",
             "name": "hud_speed_color_normal"
           },
           {
             "desc": "The color that the fill part of the speed hud item has when the player isn't moving. Default is green.",
             "group-id": "19",
-            "remarks": "Use the quake pallete colors to set this (0-255).",
+            "remarks": "Uses quake palette colors (0-255).",
             "type": "integer",
             "name": "hud_speed_color_stopped"
           },
@@ -9960,6 +9986,21 @@
           },
           {
             "group-id": "19",
+            "type": "enum",
+            "values": [
+              {
+                "description": "Flag icons.",
+                "name": "1"
+              },
+              {
+                "description": "Colored text.",
+                "name": "2"
+              }
+            ],
+            "name": "hud_teaminfo_flag_style"
+          },
+          {
+            "group-id": "19",
             "type": "float",
             "name": "hud_teaminfo_frame"
           },
@@ -9969,9 +10010,9 @@
             "name": "hud_teaminfo_frame_color"
           },
           {
+            "desc": "Lines spacing between teams when showing headers",
             "group-id": "19",
             "type": "float",
-            "desc": "Lines spacing between teams when showing headers",
             "name": "hud_teaminfo_header_spacing"
           },
           {
@@ -10025,21 +10066,6 @@
             "group-id": "19",
             "type": "",
             "name": "hud_teaminfo_powerup_style"
-          },
-          {
-            "group-id": "19",
-            "type": "enum",
-            "values": [
-              {
-                "description": "Flag icons.",
-                "name": "1"
-              },
-              {
-                "description": "Colored text.",
-                "name": "2"
-              }
-            ],
-            "name": "hud_teaminfo_flag_style"
           },
           {
             "group-id": "19",
@@ -10458,18 +10484,9 @@
           },
           {
             "default": "1",
+            "description": "Centers the status bar (classic HUD).",
             "group-id": "47",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Off.",
-                "name": "false"
-              },
-              {
-                "description": "The hud display will be centered.",
-                "name": "true"
-              }
-            ],
             "name": "scr_centerSbar"
           },
           {
@@ -10930,6 +10947,23 @@
             "name": "scr_scoreboard_posy"
           },
           {
+            "default": "0",
+            "desc": "This setting has no effect on TeamFortress which automatically enables flag stats",
+            "group-id": "47",
+            "type": "boolean",
+            "values": [
+              {
+                "description": "Disable flag stats on the scoreboard.",
+                "name": "false"
+              },
+              {
+                "description": "Enable flag stats on the scoreboard.",
+                "name": "true"
+              }
+            ],
+            "name": "scr_scoreboard_showflagstats"
+          },
+          {
             "default": "1",
             "group-id": "47",
             "type": "boolean",
@@ -10944,23 +10978,6 @@
               }
             ],
             "name": "scr_scoreboard_showfrags"
-          },
-          {
-            "desc": "This setting has no effect on TeamFortress which automatically enables flag stats",
-            "default": "0",
-            "group-id": "47",
-            "type": "boolean",
-            "values": [
-              {
-                "description": "Disable flag stats on the scoreboard.",
-                "name": "false"
-              },
-              {
-                "description": "Enable flag stats on the scoreboard.",
-                "name": "true"
-              }
-            ],
-            "name": "scr_scoreboard_showflagstats"
           },
           {
             "desc": "This variable will change what spectators are called in the scoreboard.\nWhen teamplay is not on, this variable is cut to 4 characters.\n&cRGB values are not accepted.",
@@ -11330,18 +11347,9 @@
           },
           {
             "default": "1",
+            "desc": "Rotating models bob up and down like in Quake3.",
             "group-id": "8",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Off.",
-                "name": "false"
-              },
-              {
-                "description": "Rotating models bob up and down like in Quake3.",
-                "name": "true"
-              }
-            ],
             "name": "cl_model_bobbing"
           },
           {
@@ -11366,15 +11374,15 @@
           },
           {
             "default": "0",
-            "desc": "Experimental rockets/grenades/spikes smoothing code.\nDefault value 0.1 means: use 90% of our 'vision' and 10% of server 'vision'. Should be OK for most case, but floating ping (see remarks)",
+            "desc": "Experimental rockets/grenades/spikes smoothing code.\nFor example, a value of 0.1 means use 90% of our 'vision' and 10% of server 'vision'. Should be OK for most cases (see remarks).",
             "group-id": "8",
-            "remarks": "Range between 0 and 1. This smoothing algorithm works well only with stable ping.",
+            "remarks": "Range between 0 and 1.\nThis smoothing algorithm only works well with stable ping.",
             "type": "float",
             "name": "cl_newlerp"
           },
           {
             "default": "0",
-            "desc": "Allows you to disable the linear interpolation (lerp) of objects in the game.\nInformation about objects' states arrive periodically via the net connection. By default between these moments the client tries to interpolate where the object are. After the new packet arrives client corrects the position of the object.\nIf the interpolation is disabled, client will leave object in the state described in the last received packet until a new one arrives.",
+            "desc": "Allows you to disable the linear interpolation (lerp) of objects in the game.\nInformation about objects' states arrive periodically via the net connection. By default between these moments the client tries to interpolate where the objects are. After the new packet arrives client corrects the position of the object.\nIf the interpolation is disabled, client will leave object in the state described in the last received packet until a new one arrives.",
             "group-id": "8",
             "type": "boolean",
             "values": [
@@ -12039,31 +12047,10 @@
           },
           {
             "default": "225",
-            "desc": "Determines the (palletized) color of the blood particles emitted when hitting entities with the lightning gun.",
+            "desc": "Determines the color of the blood particles emitted when hitting entities with the lightning gun.",
             "group-id": "8",
             "type": "integer",
             "name": "r_lgbloodColor"
-          },
-          {
-            "default": "225",
-            "desc": "Determines the (palletized) color of the blood particles emitted when hitting entities with the rocket launcher. Requires the rocket explosion to be small blood (cl_explosiontype 3. Default value is 225.",
-            "group-id": "8",
-            "type": "integer",
-            "name": "r_rlbloodColor_small"
-          },
-          {
-            "default": "73",
-            "desc": "Determines the (palletized) color of the blood particles emitted when hitting entities with the rocket launcher. Requires the rocket explosion to be big blood (cl_explosiontype 4. Default value is 73.",
-            "group-id": "8",
-            "type": "integer",
-            "name": "r_rlbloodColor_big"
-          },
-          {
-            "default": "73",
-            "desc": "Determines the (palletized) color of the blood particles emitted when hitting entities with weapons other than the lightning gun.",
-            "group-id": "8",
-            "type": "integer",
-            "name": "r_sgbloodColor"
           },
           {
             "default": "2",
@@ -12169,6 +12156,20 @@
               }
             ],
             "name": "r_railTrail"
+          },
+          {
+            "default": "73",
+            "desc": "Determines the color of the blood particles emitted when hitting entities with the rocket launcher. Requires the rocket explosion to be big blood (cl_explosiontype 4).",
+            "group-id": "8",
+            "type": "integer",
+            "name": "r_rlbloodColor_big"
+          },
+          {
+            "default": "225",
+            "desc": "Determines the color of the blood particles emitted when hitting entities with the rocket launcher. Requires the rocket explosion to be small blood (cl_explosiontype 3).",
+            "group-id": "8",
+            "type": "integer",
+            "name": "r_rlbloodColor_small"
           },
           {
             "default": "1",
@@ -12288,6 +12289,13 @@
               }
             ],
             "name": "r_rocketTrail"
+          },
+          {
+            "default": "73",
+            "desc": "Determines the color of the blood particles emitted when hitting entities with weapons other than the lightning gun.",
+            "group-id": "8",
+            "type": "integer",
+            "name": "r_sgbloodColor"
           },
           {
             "default": "1",
@@ -12857,6 +12865,30 @@
             "name": "gl_outline"
           },
           {
+            "default": "",
+            "desc": "Determines the outline color of enemy players. Set to \"\" to use the value of gl_outline_color_model.",
+            "group-id": "35",
+            "remarks": "Requires vid_renderer 1",
+            "type": "string",
+            "name": "gl_outline_color_enemy"
+          },
+          {
+            "default": "0 0 0",
+            "desc": "Determines the color of model outlines.",
+            "group-id": "35",
+            "remarks": "Requires vid_renderer 1",
+            "type": "string",
+            "name": "gl_outline_color_model"
+          },
+          {
+            "default": "",
+            "desc": "Determines the outline color of friendly players. Set to \"\" to use the value of gl_outline_color_model.",
+            "group-id": "35",
+            "remarks": "Requires vid_renderer 1",
+            "type": "string",
+            "name": "gl_outline_color_team"
+          },
+          {
             "default": "0 0 0",
             "desc": "Determines the color of world outlines.",
             "group-id": "35",
@@ -12864,20 +12896,27 @@
             "name": "gl_outline_color_world"
           },
           {
-            "default": "0 0 0",
-            "desc": "Determines the color of model outlines.",
-            "remarks": "Requires vid_renderer 1",
-            "group-id": "35",
-            "type": "string",
-            "name": "gl_outline_color_model"
-          },
-          {
             "default": "1",
             "desc": "Determines the scale of model outlines. Allows values 0 to 1 for rulesets smackdown and qcon, and 0 to 5 for other rulesets.",
-            "remarks": "Requires vid_renderer 1",
             "group-id": "35",
+            "remarks": "Requires vid_renderer 1",
             "type": "float",
             "name": "gl_outline_scale_model"
+          },
+          {
+            "default": "0",
+            "desc": "Use the top and bottom color for drawing player outlines",
+            "group-id": "35",
+            "remarks": "Requires vid_renderer 1",
+            "type": "boolean",
+            "name": "gl_outline_use_player_color"
+          },
+          {
+            "default": "0.997",
+            "desc": "Threshold for finding edges face orientation. Higher value is more edges. The allowed range is 0 to 0.999.",
+            "group-id": "35",
+            "type": "float",
+            "name": "gl_outline_world_normal_threshold"
           },
           {
             "default": "4",
@@ -12885,45 +12924,6 @@
             "group-id": "35",
             "type": "float",
             "name": "gl_outline_world_depth_threshold"
-          },
-          {
-            "default": "0",
-            "desc": "Use the top and bottom color for drawing player outlines",
-            "remarks": "Requires vid_renderer 1",
-            "group-id": "35",
-            "type": "boolean",
-            "name": "gl_outline_use_player_color"
-          },
-          {
-            "default": "",
-            "desc": "Determines the outline color of friendly players. Set to \"\" to use the value of gl_outline_color_model.",
-            "remarks": "Requires vid_renderer 1",
-            "group-id": "35",
-            "type": "string",
-            "name": "gl_outline_color_team"
-          },
-          {
-            "default": "",
-            "desc": "Determines the outline color of enemy players. Set to \"\" to use the value of gl_outline_color_model.",
-            "remarks": "Requires vid_renderer 1",
-            "group-id": "35",
-            "type": "string",
-            "name": "gl_outline_color_enemy"
-          },
-          {
-            "default": "0",
-            "desc": "See players through walls (demo/qtv only). Is affected by gl_outline_* values like color, scale, etc.",
-            "remarks": "Requires vid_renderer 1",
-            "group-id": "35",
-            "type": "boolean",
-            "name": "gl_spec_xray"
-          },
-          {
-            "default": "512",
-            "desc": "Distance from which you can see the players through walls, see gl_spec_xray",
-            "group-id": "35",
-            "type": "float",
-            "name": "gl_spec_xray_distance"
           },
           {
             "default": "1",
@@ -13000,6 +13000,21 @@
             "name": "gl_smoothmodels"
           },
           {
+            "default": "0",
+            "desc": "See players through walls (demo/qtv only). Is affected by gl_outline_* values like color, scale, etc.",
+            "group-id": "35",
+            "remarks": "Requires vid_renderer 1",
+            "type": "boolean",
+            "name": "gl_spec_xray"
+          },
+          {
+            "default": "1500",
+            "desc": "Distance from which you can see the players through walls, see gl_spec_xray",
+            "group-id": "35",
+            "type": "float",
+            "name": "gl_spec_xray_distance"
+          },
+          {
             "default": "1",
             "desc": "Triple buffering of HUD graphics. If you have problems with screen graphics, turn this on.",
             "group-id": "35",
@@ -13022,6 +13037,24 @@
             "remarks": "See also: r_nearclip.",
             "type": "float",
             "name": "r_farclip"
+          },
+          {
+            "default": "0",
+            "desc": "Filter out vertices causing triangles to have zero area. These types of triangles are a sore spot in some GPUs that risk introducing glitches. An expected side effect is a risk of seeing a sparkling pixel.",
+            "group-id": "35",
+            "remarks": "For macOS arm64 this is force-enabled to prevent cheating. This filtering is a temporary workaround before adding code to avoid generating such triangles in the first place.",
+            "type": "boolean",
+            "values": [
+              {
+                "description": "Disable filtering of collinear vertices.",
+                "name": "false"
+              },
+              {
+                "description": "Enable filtering of collinear vertices.",
+                "name": "true"
+              }
+            ],
+            "name": "r_remove_collinear_vertices"
           },
           {
             "default": "0",
@@ -13079,6 +13112,13 @@
             "group-id": "36",
             "type": "boolean",
             "name": "gl_part_blood"
+          },
+          {
+            "default": "1",
+            "desc": "Determines particles used for blood trails (gibs).",
+            "group-id": "36",
+            "type": "boolean",
+            "name": "gl_part_bloodtrails"
           },
           {
             "default": "1",
@@ -13507,20 +13547,10 @@
             "desc": "Controls weapon and item pickup flash.",
             "group-id": "39",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Off.",
-                "name": "false"
-              },
-              {
-                "description": "On.",
-                "name": "true"
-              }
-            ],
             "name": "cl_bonusflash"
           },
           {
-            "default": ".33",
+            "default": "0.33",
             "desc": "Reduces flash grenade effect when watching demos.",
             "group-id": "39",
             "remarks": "Values from 0 to 1 are possible.",
@@ -13727,16 +13757,6 @@
             "desc": "A clock showing how much time has elapsed since the start of the demo.",
             "group-id": "40",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Off.",
-                "name": "false"
-              },
-              {
-                "description": "On.",
-                "name": "true"
-              }
-            ],
             "name": "cl_democlock"
           },
           {
@@ -14319,6 +14339,13 @@
           },
           {
             "default": "0",
+            "desc": "Both players in fragline will be colored according to good/bad/myfrag/etc values.",
+            "group-id": "40",
+            "type": "integer",
+            "name": "r_tracker_colorfix"
+          },
+          {
+            "default": "0",
             "desc": "Everytime you take, capture or drop a flag, the number of times is displayed on the screen.",
             "group-id": "40",
             "remarks": "See r_tracker_*, cl_parseFrags and cl_loadFragFiles variables description for further info.",
@@ -14405,6 +14432,24 @@
             "name": "r_tracker_inconsole"
           },
           {
+            "default": "0",
+            "desc": "Use colored weapon string in death messages",
+            "group-id": "40",
+            "remarks": "The colors will be selected from r_tracker_color_good, r_tracker_color_bad, r_tracker_color_myfrag and r_tracker_color_fragonme",
+            "type": "enum",
+            "values": [
+              {
+                "description": "Weapon text will not be colored",
+                "name": "0"
+              },
+              {
+                "description": "Weapon text will be colored",
+                "name": "1"
+              }
+            ],
+            "name": "r_tracker_inconsole_colored_weapon"
+          },
+          {
             "default": "20",
             "desc": "Maximum number of custom frag messages to be displayed in extra frag messages window.",
             "group-id": "40",
@@ -14482,6 +14527,14 @@
             "group-id": "40",
             "type": "string",
             "name": "r_tracker_string_teammate"
+          },
+          {
+            "default": "",
+            "desc": "Prefix to prepend before tracker messages in the console",
+            "group-id": "40",
+            "remarks": "The prefix is only visible when r_tracker_inconsole has a value greater than 0",
+            "type": "string",
+            "name": "r_tracker_string_inconsole_prefix"
           },
           {
             "default": "4",
@@ -14925,16 +14978,6 @@
             "desc": "Switch on/off the text at the bottom of the screen when spectating in free mode:\n\"SPECTATOR MODE | PRESS [ATTACK] for AutoCamera\"",
             "group-id": "40",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Off.",
-                "name": "false"
-              },
-              {
-                "description": "On.",
-                "name": "true"
-              }
-            ],
             "name": "scr_spectatorMessage"
           },
           {
@@ -14996,6 +15039,22 @@
               }
             ],
             "name": "scr_teaminfo_armor_style"
+          },
+          {
+            "default": "1",
+            "group-id": "40",
+            "type": "enum",
+            "values": [
+              {
+                "description": "Flag icons.",
+                "name": "1"
+              },
+              {
+                "description": "Colored text.",
+                "name": "2"
+              }
+            ],
+            "name": "scr_teaminfo_flag_style"
           },
           {
             "default": "10 0 0 120",
@@ -15085,21 +15144,6 @@
             "name": "scr_teaminfo_powerup_style"
           },
           {
-            "group-id": "40",
-            "type": "enum",
-            "values": [
-              {
-                "description": "Flag icons.",
-                "name": "1"
-              },
-              {
-                "description": "Colored text.",
-                "name": "2"
-              }
-            ],
-            "name": "scr_teaminfo_flag_style"
-          },
-          {
             "default": "1",
             "desc": "Scales scr_teaminfo.",
             "group-id": "40",
@@ -15131,7 +15175,7 @@
             "name": "scr_teaminfo_show_ammo"
           },
           {
-            "default": "0",
+            "default": "1",
             "desc": "Shows respawn time instead of powerups during wipeout mode.",
             "group-id": "40",
             "remarks": "If disabled, countdown can still be displayed by adding %r to /scr_teaminfo_order",
@@ -15806,6 +15850,13 @@
           },
           {
             "default": "0",
+            "desc": "Applies picmip/max_size/miptexlevel to alpha masked textures (fence).",
+            "group-id": "50",
+            "type": "boolean",
+            "name": "gl_scaleAlphaTextures"
+          },
+          {
+            "default": "0",
             "desc": "Applies picmip/max_size/miptexlevel to gl_simpleitem icons.",
             "group-id": "50",
             "type": "boolean",
@@ -15831,13 +15882,6 @@
             "group-id": "50",
             "type": "boolean",
             "name": "gl_scaleskytextures"
-          },
-          {
-            "default": "0",
-            "desc": "Applies picmip/max_size/miptexlevel to alpha masked textures (fence).",
-            "group-id": "50",
-            "type": "boolean",
-            "name": "gl_scaleAlphaTextures"
           },
           {
             "default": "64",
@@ -16285,7 +16329,7 @@
             "name": "r_fx_fog_color_water"
           },
           {
-            "default": "0.002",
+            "default": "0.125",
             "desc": "Sets the density of the fog when r_fx_fog_model is an exponential model (1 or 2)",
             "group-id": "51",
             "type": "float",
@@ -16305,16 +16349,16 @@
             "type": "enum",
             "values": [
               {
-                "name": "0",
-                "description": "Linear - range is r_fx_fog_start/r_fx_fog_end"
+                "description": "Linear - range is r_fx_fog_start/r_fx_fog_end",
+                "name": "0"
               },
               {
-                "name": "1",
-                "description": "Exponential - density r_fx_fog_density"
+                "description": "Exponential - density r_fx_fog_density",
+                "name": "1"
               },
               {
-                "name": "2",
-                "description": "Exponential squared - density r_fx_fog_density.  Used when map fog is enabled"
+                "description": "Exponential squared - density r_fx_fog_density.  Used when map fog is enabled",
+                "name": "2"
               }
             ],
             "name": "r_fx_fog_model"
@@ -16340,16 +16384,16 @@
             "type": "enum",
             "values": [
               {
-                "name": "0",
-                "description": "Never use map-specific settings"
+                "description": "Never use map-specific settings",
+                "name": "0"
               },
               {
-                "name": "1",
-                "description": "Always use map-specific settings, if specified"
+                "description": "Always use map-specific settings, if specified",
+                "name": "1"
               },
               {
-                "name": "2",
-                "description": "Only use map-specific settings in local single-player mode"
+                "description": "Only use map-specific settings in local single-player mode",
+                "name": "2"
               }
             ],
             "name": "r_fx_fog_usemap"
@@ -16388,8 +16432,8 @@
           {
             "default": "",
             "desc": "Allows the sky to be rendered using an external skybox, rather than using textures from the map",
-            "comments": "Specifying a value will disable loading of skyboxes specified by the map.\nSkyboxes should be placed in 'env' or 'gfx/env' folders",
             "group-id": "51",
+            "remarks": "Specifying a value will disable loading of skyboxes specified by the map.\nSkyboxes should be placed in 'env' or 'gfx/env' folders",
             "type": "string",
             "name": "r_skyname"
           },
@@ -16886,6 +16930,7 @@
             "name": "vid_width"
           },
           {
+            "default": "0",
             "desc": "Enables borderless windowed mode (no window title, frame...). Useful for multi-monitor setups, where it can provide a fullscreen window that does not pause when out of focus.",
             "group-id": "52",
             "type": "boolean",
@@ -16993,7 +17038,7 @@
             "default": "90",
             "desc": "This variable defines your field of vision, which determines how close your vision field is to the objects.",
             "group-id": "53",
-            "remarks": "The default value is 90, however many players prefer using a higher FOV.\nNote that this would typically be scaled up when using a monitor with widescreen aspect ratio.",
+            "remarks": "While the default is 90, many players prefer using a higher FOV.\nNote that this would typically be scaled up when using a monitor with widescreen aspect ratio.",
             "type": "float",
             "name": "fov"
           },
@@ -17179,18 +17224,9 @@
           },
           {
             "default": "0",
+            "desc": "Prevents r_drawviewmodel from being changed by servers like Rocket Arena.",
             "group-id": "54",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Off.",
-                "name": "false"
-              },
-              {
-                "description": "Prevents r_drawviewmodel from being changed by servers like Rocket Arena.",
-                "name": "true"
-              }
-            ],
             "name": "cl_filterdrawviewmodel"
           },
           {
@@ -17283,13 +17319,6 @@
         "url": "/docs/settings/demos/#demo-handling",
         "items": [
           {
-            "default": "1",
-            "desc": "Whether or not to write delta packets for entities into .qwd files.\nOlder clients may not be able to play these back.",
-            "group-id": "7",
-            "type": "boolean",
-            "name": "cl_demo_qwd_delta"
-          },
-          {
             "default": "5",
             "desc": "How often to request ping updates when recording demos.\nThis variable doesn't affect ping updates when the scoreboard is shown (they are always one update per 2 seconds).",
             "group-id": "7",
@@ -17305,6 +17334,13 @@
               }
             ],
             "name": "cl_demoPingInterval"
+          },
+          {
+            "default": "1",
+            "desc": "Whether or not to write delta packets for entities into .qwd files.\nOlder clients may not be able to play these back.",
+            "group-id": "7",
+            "type": "boolean",
+            "name": "cl_demo_qwd_delta"
           },
           {
             "default": "1",
@@ -17953,7 +17989,7 @@
                 "name": "2"
               },
               {
-                "description": "Enables the use of mvd_multitrack_1 - 4 allowing to set seperate algorthms for every window with cl_muiltiview 2-4",
+                "description": "Enables the use of mvd_multitrack_1 - 4 allowing to set separate algorithms for every window with cl_muiltiview 2-4",
                 "name": "3"
               },
               {
@@ -17965,7 +18001,7 @@
           },
           {
             "default": "%a * %A + 50 * %W + %p + %f",
-            "desc": "Will be used if mvd_autotrack = 1 and a 1on1 game is played. Its an algorythm for selecting the best player.",
+            "desc": "Will be used if mvd_autotrack = 1 and a 1on1 game is played. Its an algorithm for selecting the best player.",
             "group-id": "20",
             "remarks": "For a full description read the manual.",
             "type": "string",
@@ -17973,14 +18009,14 @@
           },
           {
             "default": "1 2 3 2 3 5 8 8 1 2 3 0 0 0",
-            "desc": "Allows you to customize autotrack algoritm. See autotrack manual page for more info.",
+            "desc": "Allows you to customize autotrack algorithm. See autotrack manual page for more info.",
             "group-id": "20",
             "type": "string",
             "name": "mvd_autotrack_1on1_values"
           },
           {
             "default": "%a * %A + 50 * %W + %p + %f",
-            "desc": "Will be used if mvd_autotrack = 1 and a 2on2 game is played. Its an algorythm for selecting the best player.",
+            "desc": "Will be used if mvd_autotrack = 1 and a 2on2 game is played. Its an algorithm for selecting the best player.",
             "group-id": "20",
             "remarks": "For a full description read the manual.",
             "type": "string",
@@ -17988,14 +18024,14 @@
           },
           {
             "default": "1 2 3 2 3 5 8 8 1 2 3 500 900 1000",
-            "desc": "Allows you to customize autotrack algoritm. See autotrack manual page for more info.",
+            "desc": "Allows you to customize autotrack algorithm. See autotrack manual page for more info.",
             "group-id": "20",
             "type": "string",
             "name": "mvd_autotrack_2on2_values"
           },
           {
             "default": "%a * %A + 50 * %W + %p + %f",
-            "desc": "Will be used if mvd_autotrack = 1 and a 4on4 game is played. Its an algorythm for selecting the best player.",
+            "desc": "Will be used if mvd_autotrack = 1 and a 4on4 game is played. Its an algorithm for selecting the best player.",
             "group-id": "20",
             "remarks": "For a full description read the manual.",
             "type": "string",
@@ -18003,14 +18039,14 @@
           },
           {
             "default": "1 2 4 2 4 6 10 10 1 2 3 500 900 1000",
-            "desc": "Allows you to customize autotrack algoritm. See autotrack manual page for more info.",
+            "desc": "Allows you to customize autotrack algorithm. See autotrack manual page for more info.",
             "group-id": "20",
             "type": "string",
             "name": "mvd_autotrack_4on4_values"
           },
           {
             "default": "%a * %A + 50 * %W + %p + %f",
-            "desc": "Will be used if mvd_autotrack = 2.\n Its an algorythm for selecting the best player.",
+            "desc": "Will be used if mvd_autotrack = 2.\n Its an algorithm for selecting the best player.",
             "group-id": "20",
             "remarks": "For a full description read the manual.",
             "type": "string",
@@ -18018,7 +18054,7 @@
           },
           {
             "default": "1 2 3 2 3 4 6 6 1 2 3 500 900 1000",
-            "desc": "Allows you to customize autotrack algoritm. See autotrack manual page for more info.",
+            "desc": "Allows you to customize autotrack algorithm. See autotrack manual page for more info.",
             "group-id": "20",
             "type": "string",
             "name": "mvd_autotrack_custom_values"
@@ -18120,21 +18156,11 @@
             "desc": "When playing MultiView Demo (MVD), you can turn on more messages printed in the console, like those you might know from moreinfo command in ktpro.\nE.g.: Nabbe picked up quad.",
             "group-id": "20",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Off",
-                "name": "false"
-              },
-              {
-                "description": "On",
-                "name": "true"
-              }
-            ],
             "name": "mvd_moreinfo"
           },
           {
             "default": "%f",
-            "desc": "Will be used if mvd_autotrack = 3 and cl_multiview is enabled.\nIts an algorythm for selecting the best player on viewport 1.",
+            "desc": "Will be used if mvd_autotrack = 3 and cl_multiview is enabled.\nIts an algorithm for selecting the best player on viewport 1.",
             "group-id": "20",
             "remarks": "For a full description read the manual.",
             "type": "string",
@@ -18142,14 +18168,14 @@
           },
           {
             "default": "1 2 3 2 3 5 8 8 1 2 3 0 0 0",
-            "desc": "Allows you to customize autotrack algoritm. See autotrack manual page for more info.",
+            "desc": "Allows you to customize autotrack algorithm. See autotrack manual page for more info.",
             "group-id": "20",
             "type": "string",
             "name": "mvd_multitrack_1_values"
           },
           {
             "default": "%W",
-            "desc": "Will be used if mvd_autotrack = 3 and cl_multiview is enabled.\nIts an algorythm for selecting the best player on viewport 2.",
+            "desc": "Will be used if mvd_autotrack = 3 and cl_multiview is enabled.\nIts an algorithm for selecting the best player on viewport 2.",
             "group-id": "20",
             "remarks": "For a full description read the manual.",
             "type": "string",
@@ -18157,14 +18183,14 @@
           },
           {
             "default": "1 2 3 2 3 5 8 8 1 2 3 0 0 0",
-            "desc": "Allows you to customize autotrack algoritm. See autotrack manual page for more info.",
+            "desc": "Allows you to customize autotrack algorithm. See autotrack manual page for more info.",
             "group-id": "20",
             "type": "string",
             "name": "mvd_multitrack_2_values"
           },
           {
             "default": "%h",
-            "desc": "Will be used if mvd_autotrack = 3 and cl_multiview is enabled.\nIts an algorythm for selecting the best player on viewport 3.",
+            "desc": "Will be used if mvd_autotrack = 3 and cl_multiview is enabled.\nIts an algorithm for selecting the best player on viewport 3.",
             "group-id": "20",
             "remarks": "For a full description read the manual.",
             "type": "string",
@@ -18172,14 +18198,14 @@
           },
           {
             "default": "1 2 3 2 3 5 8 8 1 2 3 0 0 0",
-            "desc": "Allows you to customize autotrack algoritm. See autotrack manual page for more info.",
+            "desc": "Allows you to customize autotrack algorithm. See autotrack manual page for more info.",
             "group-id": "20",
             "type": "string",
             "name": "mvd_multitrack_3_values"
           },
           {
             "default": "%A",
-            "desc": "Will be used if mvd_autotrack = 3 and cl_multiview is enabled.\nIts an algorythm for selecting the best player on viewport 4.",
+            "desc": "Will be used if mvd_autotrack = 3 and cl_multiview is enabled.\nIts an algorithm for selecting the best player on viewport 4.",
             "group-id": "20",
             "remarks": "For a full description read the manual.",
             "type": "string",
@@ -18187,7 +18213,7 @@
           },
           {
             "default": "1 2 3 2 3 5 8 8 1 2 3 0 0 0",
-            "desc": "Allows you to customize autotrack algoritm. See autotrack manual page for more info.",
+            "desc": "Allows you to customize autotrack algorithm. See autotrack manual page for more info.",
             "group-id": "20",
             "type": "string",
             "name": "mvd_multitrack_4_values"
@@ -18554,18 +18580,9 @@
           },
           {
             "default": "1",
+            "desc": "Will convert +jump commands to +moveup commands when in liquid (water, lava, slime) and in spectator mode.",
             "group-id": "9",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Off.",
-                "name": "false"
-              },
-              {
-                "description": "Will convert +jump commands to +moveup commands when in liquid (water, lava, slime) and in spectator mode.",
-                "name": "true"
-              }
-            ],
             "name": "cl_smartjump"
           },
           {
@@ -18687,7 +18704,7 @@
             "name": "in_builtinkeymap"
           },
           {
-            "default": "1",
+            "default": "0",
             "desc": "If set, grabs keyboard hotkeys.\nMay need to be enabled/disabled depending on your window manager.",
             "group-id": "9",
             "type": "boolean",
@@ -18768,22 +18785,22 @@
             "default": "1",
             "desc": "Ignores operating-system interpretation of keypresses while deadkey is held down",
             "group-id": "11",
-            "type": "enum",
             "systems": [
               "macos"
             ],
+            "type": "enum",
             "values": [
               {
-                "name": "0",
-                "description": "Disabled"
+                "description": "Disabled",
+                "name": "0"
               },
               {
-                "name": "1",
-                "description": "Enabled when option keys are held down"
+                "description": "Enabled when option keys are held down",
+                "name": "1"
               },
               {
-                "name": "2",
-                "description": "Enabled when alt keys are held down (for standard keyboard on MacOS)"
+                "description": "Enabled when alt keys are held down (for standard keyboard on MacOS)",
+                "name": "2"
               }
             ],
             "name": "in_ignore_deadkeys"
@@ -18800,10 +18817,10 @@
             "desc": "If set, will ignore keyboard events received immediately after regaining focus.  Should stop shortcut keys from firing in-game.",
             "group-id": "11",
             "remarks": "X11 systems only.",
-            "type": "boolean",
             "systems": [
               "linux"
             ],
+            "type": "boolean",
             "name": "in_ignore_unfocused_keyb"
           },
           {
@@ -19458,16 +19475,6 @@
             "desc": "Controls whether f_took, f_death etc are forced to execute even if the game isn't a team game.",
             "group-id": "49",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Off.",
-                "name": "false"
-              },
-              {
-                "description": "On.",
-                "name": "true"
-              }
-            ],
             "name": "tp_forceTriggers"
           },
           {
@@ -19475,16 +19482,6 @@
             "desc": "Controls whether to load locs for teamplay reporting.\nNote: The locs should be in your \"/id1/locs/\",\n\"/ezquake/locs\" or \"/qw/locs\" folder.",
             "group-id": "49",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Off.",
-                "name": "false"
-              },
-              {
-                "description": "On.",
-                "name": "true"
-              }
-            ],
             "name": "tp_loadlocs"
           },
           {
@@ -19493,16 +19490,6 @@
             "group-id": "49",
             "remarks": "For ruleset 'Smackdown' message triggers always are off.",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Message triggers are off.",
-                "name": "false"
-              },
-              {
-                "description": "Message triggers are on.",
-                "name": "true"
-              }
-            ],
             "name": "tp_msgtriggers"
           },
           {
@@ -19562,7 +19549,7 @@
           },
           {
             "default": "78654321",
-            "desc": "This allows you to define the order from best to worst weapon.\nThe default value is \"78564321\", which means that the Rocket Launcher is the best weapon (impulse 7), then Lightning Gun (impulse 8), Super Nailgun (impulse 5), Grenade Launcher (impulse 6), Nailgun (impulse 4), Super Shotgun (impulse 3), Shotgun (impulse 2), Axe (impulse 1).",
+            "desc": "This allows you to define the order from best to worst weapon.\nThe default value, \"78564321\", means that the Rocket Launcher is the best weapon (impulse 7), then Lightning Gun (impulse 8), Super Nailgun (impulse 5), Grenade Launcher (impulse 6), Nailgun (impulse 4), Super Shotgun (impulse 3), Shotgun (impulse 2), Axe (impulse 1).",
             "group-id": "49",
             "type": "string",
             "name": "tp_weapon_order"
@@ -19643,24 +19630,25 @@
           },
           {
             "default": "11",
-            "desc": "The client includes \"sound interpolation\" which allows it to play sounds at higher frequencies, than the default 11025 Hz with perfect quality.\nIn addition to \"s_khz\" also \"s_bits\" (linux only) will have an influence on interpolation quality. This variable allows you to choose the frequency you want to interpolate the sounds to.\nYou will quickly discover, that the shaft sound is different at increased sampling rate. That's because shaft sounds were recorded at 22050 kHz, so probably that's how they should sound from the beginning. If you don't like it, you can always convert them to 11025.",
+            "desc": "Sets the audio sampling rate.\nIn ezQuake, this introduces artifacts which give a \"crisper\"/\"grainy\" feel to some sounds, as the interpolation is not perfect. All the original sounds are 11k, except for shaft which is 22k and will sound different when setting s_khz over 11.",
             "group-id": "45",
+            "remarks": "If you dislike the changes in sound, you can i.e. convert the shaft sounds down to 11k (and fail \"f_modified\" checks), go back to s_khz 11, or use s_linearresample for perfect resampling.",
             "type": "enum",
             "values": [
               {
-                "description": "11khz sound (default).",
+                "description": "11kHz sound (default).",
                 "name": "11"
               },
               {
-                "description": "22khz sound.",
+                "description": "22kHz sound.",
                 "name": "22"
               },
               {
-                "description": "44khz sound.",
+                "description": "44kHz sound.",
                 "name": "44"
               },
               {
-                "description": "48khz sound.",
+                "description": "48kHz sound.",
                 "name": "48"
               }
             ],
@@ -19668,24 +19656,32 @@
           },
           {
             "default": "0",
-            "desc": "Controls whether or not to resample sounds as they are loaded.",
+            "desc": "Controls whether to resample sounds to s_khz with perfect quality. This cleans up any artifacts resulting from the default interpolation.",
             "group-id": "45",
+            "remarks": "Resampling takes place as the sounds are loaded.",
             "type": "enum",
             "values": [
               {
-                "description": "Do not perform resampling.",
+                "description": "No linear resampling.",
                 "name": "0"
               },
               {
-                "description": "Upscale sounds as they are loaded.",
+                "description": "Linear resampling when upsampling only.",
                 "name": "1"
               },
               {
-                "description": "Upscale & downscale sounds as they loaded, as appropriate.",
+                "description": "Linear resampling when downsampling and upsampling.",
                 "name": "2"
               }
             ],
             "name": "s_linearresample"
+          },
+          {
+            "default": "0",
+            "desc": "Same as s_linearresample, but specifically for VOIP audio streams.",
+            "group-id": "45",
+            "type": "integer",
+            "name": "s_linearresample_stream"
           },
           {
             "default": "0",
@@ -19694,12 +19690,6 @@
             "remarks": "This used to help with performance on systems with low memory.",
             "type": "boolean",
             "name": "s_loadas8bit"
-          },
-          {
-            "desc": "Only affects OSS and legacy ALSA:\n\nThis variable defines the delay time for sounds. How low you can set your sound mixahead depends on your FPS, when you set it too low, your sound will start crackling.\nGenerally, with 72 FPS you should be able to use a delay of 0.06 seconds.",
-            "group-id": "45",
-            "type": "float",
-            "name": "s_mixahead"
           },
           {
             "default": "misc/talk.wav",
@@ -19842,18 +19832,9 @@
           },
           {
             "default": "0",
+            "description": "Swaps left and right sound channels.",
             "group-id": "45",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Off.",
-                "name": "false"
-              },
-              {
-                "description": "Will swap left and right sound channels.",
-                "name": "true"
-              }
-            ],
             "name": "s_swapstereo"
           },
           {
@@ -20030,7 +20011,7 @@
             "name": "cl_c2spps"
           },
           {
-            "default": "5",
+            "default": "30",
             "desc": "Affects the download speed when using chunked downloads, more chunks per frame results in higher download speed.",
             "group-id": "21",
             "remarks": "Servers can limit the amount of chunks sent per frame.",
@@ -21155,6 +21136,14 @@
             "name": "sb_ignore_proxy"
           },
           {
+            "default": "",
+            "desc": "Allows custom filters to be written based on the serverinfo strings\nFormat is [+|-]infokey=value with +/- being include/exclude.\nCan also specify +*/-* to include/exclude all, and +key/-key to include/exclude servers with any value for that key\nValues are regular expressions, if the server doesn't have that key specified then the rule is skipped",
+            "group-id": "42",
+            "remarks": "Default (if no rules match) is opposite of the last valid rule specified.\nRules should be separated by spaces\nExamples\n\n+ktxver               // pass any ktx server, hide others\n+*gamedir=fortress    // pass Team Fortress servers, hide others\n-*version=QTV*        // remove QTV servers\n-map=dm4              // fourier woz ere\n",
+            "type": "string",
+            "name": "sb_info_filter"
+          },
+          {
             "default": "3",
             "desc": "This determines how often ezQuake should try to retrieve information from a server until it is considered to be not responding.",
             "group-id": "42",
@@ -21174,14 +21163,6 @@
             "group-id": "42",
             "type": "float",
             "name": "sb_infotimeout"
-          },
-          {
-            "default": "",
-            "desc": "Allows custom filters to be written based on the serverinfo strings\nFormat is [+|-]infokey=value with +/- being include/exclude.\nCan also specify +*/-* to include/exclude all, and +key/-key to include/exclude servers with any value for that key\nValues are regular expressions, if the server doesn't have that key specified then the rule is skipped",
-            "group-id": "42",
-            "type": "string",
-            "remarks": "Default (if no rules match) is opposite of the last valid rule specified.\nRules should be separated by spaces\nExamples\n\n+ktxver               // pass any ktx server, hide others\n+*gamedir=fortress    // pass Team Fortress servers, hide others\n-*version=QTV*        // remove QTV servers\n-map=dm4              // fourier woz ere\n",
-            "name": "sb_info_filter"
           },
           {
             "default": "0",
