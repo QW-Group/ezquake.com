@@ -35,4 +35,4 @@ A history of nightly builds for Windows is available at [builds.quakeworld.nu](h
 ## Game Media
 
 * Download textures, models and more on <a href="https://gfx.quakeworld.nu/">QuakeWorld GFX</a>
-* Download maps from maps.quakeworld.nu
+* Download maps from [maps.quakeworld.nu](https://maps.quakeworld.nu)
