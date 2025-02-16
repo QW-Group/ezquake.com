@@ -1,9 +1,9 @@
-name: Deploy to preview channel
+name: Deploy to production
 
 on:
-  pull_request:
-    paths:
-      - "docs/**" # run only for specific files
+  push:
+    branches:
+      - main
 
 jobs:
   build_and_deploy:
