@@ -17,6 +17,11 @@ import PreviousReleases from "../components/PreviousReleases.vue";
     </template>
 </Suspense>
 
+## Nightly builds
+
+A history of nightly builds is available
+at [builds.quakeworld.nu](https://builds.quakeworld.nu/ezquake/snapshots/).
+
 ## Previous releases
 
 See [all releases](https://github.com/QW-Group/ezquake-source/releases) on GitHub.
@@ -27,10 +32,6 @@ See [all releases](https://github.com/QW-Group/ezquake-source/releases) on GitHu
         Loading...
     </template>
 </Suspense>
-
-## Nightly builds
-
-A history of nightly builds for Windows is available at [builds.quakeworld.nu](https://builds.quakeworld.nu/ezquake/snapshots/).
 
 ## Game Media
 

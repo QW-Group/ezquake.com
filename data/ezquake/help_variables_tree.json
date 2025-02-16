@@ -10551,6 +10551,10 @@
               {
                 "description": "Teamfrags in teamplay mode.",
                 "name": "2"
+              },
+              {
+                "description": "Teamfrags in teamplay mode, individual frags hidden.",
+                "name": "3"
               }
             ],
             "name": "scr_drawHFrags"
@@ -10862,6 +10866,23 @@
             "name": "scr_scoreboard_centered"
           },
           {
+            "default": "0",
+            "desc": "Toggle between the classic and modern look in the scoreboard.",
+            "group-id": "47",
+            "type": "boolean",
+            "values": [
+              {
+                "description": "Disable the classic look.",
+                "name": "false"
+              },
+              {
+                "description": "Enable the classic look.",
+                "name": "true"
+              }
+            ],
+            "name": "scr_scoreboard_classic"
+          },
+          {
             "default": "1",
             "group-id": "47",
             "type": "boolean",
@@ -10921,6 +10942,23 @@
             "name": "scr_scoreboard_forcecolors"
           },
           {
+            "default": "1",
+            "desc": "Toggle the highlighting of your own scores in the scoreboard.",
+            "group-id": "47",
+            "type": "boolean",
+            "values": [
+              {
+                "description": "Disable highlight of your own scores in the scoreboard.",
+                "name": "false"
+              },
+              {
+                "description": "Enable highlight of your own scores in the scoreboard.",
+                "name": "true"
+              }
+            ],
+            "name": "scr_scoreboard_highlightself"
+          },
+          {
             "default": "0",
             "desc": "Controls the X-offset of the scoreboard.",
             "group-id": "47",
@@ -10962,6 +11000,22 @@
               }
             ],
             "name": "scr_scoreboard_showflagstats"
+          },
+          {
+            "default": "0",
+            "group-id": "47",
+            "type": "boolean",
+            "values": [
+              {
+                "description": "Hide the clock on the scoreboard.",
+                "name": "false"
+              },
+              {
+                "description": "Show the clock on the scoreboard.",
+                "name": "true"
+              }
+            ],
+            "name": "scr_scoreboard_showclock"
           },
           {
             "default": "1",
@@ -12301,7 +12355,7 @@
             "default": "1",
             "desc": "Adds transparency to the lightning gun beam (shaft).",
             "group-id": "8",
-            "remarks": "Disabled in ruleset smackdown.",
+            "remarks": "Disabled in ruleset smackdown and smackdrive.",
             "type": "float",
             "values": [
               {
@@ -12315,7 +12369,7 @@
             "default": "0",
             "desc": "Shift start of the shaft lights.",
             "group-id": "8",
-            "remarks": "Doesn't work with smackdown ruleset. Intended for movies.",
+            "remarks": "Doesn't work with ruleset smackdown and smackdrive. Intended for movies.",
             "type": "float",
             "name": "r_shiftbeam"
           },
@@ -12354,26 +12408,17 @@
           },
           {
             "default": "0",
-            "desc": "Adds coronas to some effects:\n\n - Explosions: Basically just a bright flash since the default explosions didn't feel powerful enough.\n - Muzzleflashes.\n - Lightning.\n - Fire: Torches have glows.\n - Rocket Lights.",
+            "desc": "Adds coronas to some effects:\n\n - Explosions: Basically just a bright flash since the default explosions didn't feel powerful enough.\n - Weapon impacts (optional, see gl_particle_*).\n - Muzzleflashes.\n - Lightning bolts.\n - Fire: Torches have glows.\n - Rocket Lights.",
             "group-id": "15",
             "type": "float",
             "name": "gl_coronas"
           },
           {
             "default": "0",
-            "desc": "Allows you to turn on/off blue light when spawning.",
+            "desc": "Adds a blue glow to spawn/teleport effects.",
             "group-id": "15",
+            "remarks": "Requires gl_coronas 1.",
             "type": "boolean",
-            "values": [
-              {
-                "description": "Spawn coronas off.",
-                "name": "false"
-              },
-              {
-                "description": "Spawn coronas on.",
-                "name": "true"
-              }
-            ],
             "name": "gl_coronas_tele"
           },
           {
@@ -12751,8 +12796,9 @@
           },
           {
             "default": "0",
-            "desc": "Toggles particle lightning beams.\nMay be restricted by rulesets.",
+            "desc": "Toggles particle lightning beams. Glow is controlled by gl_coronas.",
             "group-id": "35",
+            "remarks": "Restricted in rulesets qcon and smackdown/drive (glow effect remains).",
             "type": "boolean",
             "name": "gl_lightning"
           },
@@ -12897,7 +12943,7 @@
           },
           {
             "default": "1",
-            "desc": "Determines the scale of model outlines. Allows values 0 to 1 for rulesets smackdown and qcon, and 0 to 5 for other rulesets.",
+            "desc": "Determines the scale of model outlines. Allows values 0 to 1 for rulesets smackdown, smackdrive and qcon, and 0 to 5 for other rulesets.",
             "group-id": "35",
             "remarks": "Requires vid_renderer 1",
             "type": "float",
@@ -13831,7 +13877,7 @@
             "default": "1",
             "desc": "Enables/Disables strings-hud.\nStrings hud is not mqwcl hud. It gives you ability put any string (or value of some variable) on your hud.",
             "group-id": "40",
-            "remarks": "Strings hud banned for ruleset smackdown.",
+            "remarks": "Strings hud banned for ruleset smackdown and smackdrive.",
             "type": "boolean",
             "values": [
               {
@@ -15522,17 +15568,8 @@
           {
             "default": "0",
             "group-id": "40",
-            "type": "boolean",
-            "values": [
-              {
-                "description": "Never display the turtle icon.",
-                "name": "false"
-              },
-              {
-                "description": "Display the turtle icon when your frame rate drops below 10.",
-                "name": "true"
-              }
-            ],
+            "type": "float",
+            "desc": "Sets the value at which the turtle icon will be displayed. For example, if showturtle is set to 70, the turtle will appear when the FPS drops to 70 or below.",
             "name": "showturtle"
           },
           {
@@ -16438,6 +16475,14 @@
             "name": "r_skyname"
           },
           {
+            "default": "1",
+            "desc": "Sets the scale factor of skybox animation if above 0, and skybox has an animation configuration.",
+            "group-id": "51",
+            "remarks": "Specifying a value above 1.0 will increase the pace of the configured animation.",
+            "type": "float",
+            "name": "r_skywind"
+          },
+          {
             "default": "10 60 10",
             "desc": "Changes color of slime when r_fastturb set to 1.",
             "group-id": "51",
@@ -16724,6 +16769,87 @@
             "name": "vid_framebuffer_width"
           },
           {
+            "default": "0",
+            "desc": "Fast Approximate Anti-Aliasing. Enable vid_framebuffer 2 to avoid filtering HUD. Typically between 1-6.",
+            "group-id": "52",
+            "type": "integer",
+            "values": [
+              {
+                "description": "Disabled.",
+                "name": "0"
+              },
+              {
+                "description": "Medium dither, quality 1 (fastest).",
+                "name": "1"
+              },
+              {
+                "description": "Medium dither, quality 2.",
+                "name": "2"
+              },
+              {
+                "description": "Medium dither, quality 3.",
+                "name": "3"
+              },
+              {
+                "description": "Medium dither, quality 4.",
+                "name": "4"
+              },
+              {
+                "description": "Medium dither, quality 5.",
+                "name": "5"
+              },
+              {
+                "description": "Medium dither, quality 6 (highest quality).",
+                "name": "6"
+              },
+              {
+                "description": "Less dither, quality 1 (fastest).",
+                "name": "7"
+              },
+              {
+                "description": "Less dither, quality 2.",
+                "name": "8"
+              },
+              {
+                "description": "Less dither, quality 3.",
+                "name": "9"
+              },
+              {
+                "description": "Less dither, quality 4.",
+                "name": "10"
+              },
+              {
+                "description": "Less dither, quality 5.",
+                "name": "11"
+              },
+              {
+                "description": "Less dither, quality 6.",
+                "name": "12"
+              },
+              {
+                "description": "Less dither, quality 7.",
+                "name": "13"
+              },
+              {
+                "description": "Less dither, quality 8.",
+                "name": "14"
+              },
+              {
+                "description": "Less dither, quality 9.",
+                "name": "15"
+              },
+              {
+                "description": "Less dither, quality 10 (highest quality).",
+                "name": "16"
+              },
+              {
+                "description": "No dither (expensive).",
+                "name": "17"
+              }
+            ],
+            "name": "vid_framebuffer_fxaa"
+          },
+          {
             "default": "1",
             "desc": "Toggles between fullscreen and windowed mode.",
             "group-id": "52",
@@ -17008,7 +17134,7 @@
             "default": "20",
             "desc": "You can turn off the 'dodging' or 'rolling' effect for your own point of view while still see other player models affected by cl_rollangle.",
             "group-id": "53",
-            "remarks": "0 disables, 1 is standard. Disabled by ruleset smackdown.",
+            "remarks": "0 disables, 1 is standard. Disabled by ruleset smackdown and smackdrive.",
             "type": "integer",
             "name": "cl_rollalpha"
           },
@@ -18495,6 +18621,29 @@
             "name": "allow_scripts"
           },
           {
+            "default": "bsp,lmp,loc,mdl,mvd,pcx,spr,wad,wav",
+            "desc": "This variable controls which file extensions a client/server can download/upload from/to the server/client.",
+            "group-id": "9",
+            "type": "string",
+            "name": "cl_allow_downloads"
+          },
+          {
+            "default": "0",
+            "group-id": "9",
+            "type": "boolean",
+            "values": [
+              {
+                "description": "Don't allow uploads.",
+                "name": "0"
+              },
+              {
+                "description": "Allow uploads.",
+                "name": "1"
+              }
+            ],
+            "name": "cl_allow_uploads"
+          },
+          {
             "default": "1.5",
             "desc": "This variable sets multiplier by which your \"cl_yawspeed\" (how fast you turn) is multiplied when running (+speed).",
             "group-id": "9",
@@ -18569,6 +18718,13 @@
             "group-id": "9",
             "type": "float",
             "name": "cl_pitchspeed"
+          },
+          {
+            "default": "+attack,-attack,alias,bf,changing,cmd,color,download,exec,fullserverinfo,impulse,infoset,ktx_infoset,ktx_sinfoset,nextul,on_admin,on_connect,on_connect_ctf,on_connect_ffa,on_enter,on_enter_ctf,on_enter_ffa,on_matchend,on_matchstart,on_observe,on_observe_ctf,on_observe_ffa,on_spec_enter,on_spec_enter_ctf,on_spec_enter_ffa,on_spec_matchend,on_spec_matchstart,on_unadmin,packet,play,rate,reconnect,say,sinfoset,skin,skins,team,tempalias,track,wait",
+            "desc": "This variable controls which commands and variables a server is allowed to execute or set on the client. Input a comma-separated list of commands and variables to toggle access. The default values are adapted for KTX use.",
+            "group-id": "9",
+            "type": "string",
+            "name": "cl_remote_capabilities"
           },
           {
             "default": "400",
