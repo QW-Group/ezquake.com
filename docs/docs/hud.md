@@ -224,3 +224,4 @@ Grouping elements have only two properties (width and height), they should be se
 ## Variables
 
 See the [HUD variable reference](./settings/hud#mqwcl-hud) for all HUD settings.
+Note that when changing HUD variables manually, `hud_recalculate` may be needed for some changes to show.
