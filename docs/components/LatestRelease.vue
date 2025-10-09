@@ -4,11 +4,11 @@ import Markdown from "./Markdown.vue";
 
 export default {
   async setup() {
-    const latestReleaseResponse = await fetch("https://api.github.com/repos/qw-group/ezquake-source/releases/latest");
-    const latestRelease = await latestReleaseResponse.json()
+    const releasesResponse = await fetch("https://raw.githubusercontent.com/vikpe/qw-data/refs/heads/main/github/ezquake_releases.json");
+    const releases = await releasesResponse.json()
 
     return {
-      latestRelease
+      latestRelease: releases[0]
     }
   },
   components: {

@@ -2,7 +2,7 @@
 
 export default {
   async setup() {
-    const releasesResponse = await fetch("https://api.github.com/repos/qw-group/ezquake-source/releases");
+    const releasesResponse = await fetch("https://raw.githubusercontent.com/vikpe/qw-data/refs/heads/main/github/ezquake_releases.json");
     const releases = await releasesResponse.json()
     const prevReleaseLimit = 5;
 
