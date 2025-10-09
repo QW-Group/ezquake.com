@@ -37,7 +37,7 @@ export default {
   <div style="margin: 1em 0" v-if="latestRelease.body">
     <details class="details custom-block">
       <summary>Release notes</summary>
-      <Markdown :content="latestRelease.body" headeroffset="3" />
+      <Markdown :content="latestRelease.body" :headeroffset="3" />
     </details>
   </div>
 
