@@ -10684,6 +10684,13 @@
           },
           {
             "default": "0",
+            "desc": "If set, messages are padded on the left by the number of spaces defined in the variable",
+            "group-id": "47",
+            "type": "integer",
+            "name": "con_margin_left"
+          },
+          {
+            "default": "0",
             "desc": "If set, notification area is limited to mm2 (/say_team) messages.",
             "group-id": "47",
             "type": "boolean",
@@ -19101,6 +19108,28 @@
             "group-id": "9",
             "type": "string",
             "name": "cl_remote_capabilities"
+          },
+          {
+            "default": "0",
+            "desc": "Enables safestrafe mode in client regardless of server enforcement.",
+            "group-id": "9",
+            "remarks": "Safestrafe is a serverside SOCD fairness feature that requires one or more stop frames between direction changes.",
+            "type": "integer",
+            "values": [
+              {
+                "description": "Disabled",
+                "name": "0 "
+              },
+              {
+                "description": "Enabled (requires one stop frame between direction changes)",
+                "name": "1 "
+              },
+              {
+                "description": "Sets the number of required stop frames between direction changes.",
+                "name": "2+"
+              }
+            ],
+            "name": "cl_safestrafe"
           },
           {
             "default": "400",
