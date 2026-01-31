@@ -240,27 +240,6 @@
             "name": "qws_version"
           },
           {
-            "default": "0",
-            "desc": "Sets the method used to adjust wall & floor textures (/r_drawflat) by the corresponding color (/r_wallcolor & /r_floorcolor)",
-            "remarks": "Works in GLSL modes only (see /gl_program_world).\nMode 0 will give best performance, mode 2 is the recommended setting for different colors.\nCan not be changed during a match.",
-            "type": "enum",
-            "values": [
-              {
-                "description": "Walls/floors will be solid color, as per /r_drawflat setting.",
-                "name": "0"
-              },
-              {
-                "description": "Walls/floors will be textured and blended with custom colors.",
-                "name": "1"
-              },
-              {
-                "description": "Walls/floors will be monochrome textures using custom colors.",
-                "name": "2"
-              }
-            ],
-            "name": "r_drawflat_mode"
-          },
-          {
             "default": "1",
             "group-id": "0",
             "system-generated": true,
@@ -14184,6 +14163,30 @@
             "name": "cl_gameclock_y"
           },
           {
+            "default": "0",
+            "group-id": "40",
+            "type": "enum",
+            "values": [
+              {
+                "description": "White numbers",
+                "name": "0"
+              },
+              {
+                "description": "Red numbers",
+                "name": "1"
+              },
+              {
+                "description": "Green numbers (high bit)",
+                "name": "2"
+              },
+              {
+                "description": "Green numbers (low bit)",
+                "name": "3"
+              }
+            ],
+            "name": "cl_gameclock_style"
+          },
+          {
             "default": "1",
             "desc": "Enables/Disables strings-hud.\nStrings hud is not mqwcl hud. It gives you ability put any string (or value of some variable) on your hud.",
             "group-id": "40",
@@ -14934,6 +14937,13 @@
               }
             ],
             "name": "r_tracker_time"
+          },
+          {
+            "default": "0",
+            "desc": "Print the weapon icon or name before the player name.",
+            "group-id": "40",
+            "type": "boolean",
+            "name": "r_tracker_weapon_first"
           },
           {
             "default": "0",
@@ -16379,6 +16389,28 @@
               }
             ],
             "name": "r_drawflat"
+          },
+          {
+            "default": "0",
+            "desc": "Sets the method used to adjust wall & floor textures (/r_drawflat) by the corresponding color (/r_wallcolor & /r_floorcolor)",
+            "group-id": "50",
+            "remarks": "Works in GLSL modes only (see /gl_program_world).\nMode 0 will give best performance, mode 2 is the recommended setting for different colors.\nCan not be changed during a match.",
+            "type": "enum",
+            "values": [
+              {
+                "description": "Walls/floors will be solid color, as per /r_drawflat setting.",
+                "name": "0"
+              },
+              {
+                "description": "Walls/floors will be textured and blended with custom colors.",
+                "name": "1"
+              },
+              {
+                "description": "Walls/floors will be monochrome textures using custom colors.",
+                "name": "2"
+              }
+            ],
+            "name": "r_drawflat_mode"
           },
           {
             "default": "50 100 150",
@@ -21570,7 +21602,7 @@
             "name": "qtv_event_leave"
           },
           {
-            "default": "1",
+            "default": "2",
             "desc": "Controls the visibility of QTV event messages, allowing them to be enabled, disabled, or hidden during an active match.",
             "group-id": "38",
             "type": "enum",
